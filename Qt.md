@@ -1,3 +1,12 @@
+---
+title: Qt
+date: 2023-07-28 21:03:52
+categories: c++
+tags: 
+    - qt
+    - c++
+---
+
 # Qt
 
 ## 信号和槽机制
@@ -9,8 +18,8 @@
 > //多个信号可以连接同一个槽函数
 > //信号和槽函数的参数的类型必须一一对应，有顺序要求
 > //信号的参数个数必须>=槽函数的参数个数
->     //参数:参数1->信号的发送者，参数2->发送的信号（函数地址）,参数3->信号的接收者，参数4->处理的槽函数
->     connect(myBtn, &QPushButton::clicked, this, &myWidget::close);
+>  //参数:参数1->信号的发送者，参数2->发送的信号（函数地址）,参数3->信号的接收者，参数4->处理的槽函数
+>  connect(myBtn, &QPushButton::clicked, this, &myWidget::close);
 > //最后一个参数可以使用lambda表达式[](){}
 > 
 > //重载版本
@@ -51,7 +60,7 @@
 > toolBar->setFloatable(false);
 > //设置移动性（总开关）
 > ```
-> 
+>
 >
 > ```c++
 > //    toolBar->setMovable(false);//相当于固定不能动了，这是总开关
@@ -106,93 +115,95 @@
 ## Dialog对话框
 
 > ```c
->     //点击新建弹出对话框,triggered触发
->     connect(ui->actionnew,&QAction::triggered,this,[=](){
->         //对话框分类
->         //模态对话框（可以对其他窗口进行操作）非模态对话框（不能……）
->         //1、模态创建
->         //        QDialog dlg(this);
->         //        dlg.resize(200,100);
->         //        dlg.exec();
->     //        qDebug()<<"模态对话框弹出了";
+>  //点击新建弹出对话框,triggered触发
+>  connect(ui->actionnew,&QAction::triggered,this,[=](){
+>      //对话框分类
+>      //模态对话框（可以对其他窗口进行操作）非模态对话框（不能……）
+>      //1、模态创建
+>      //        QDialog dlg(this);
+>      //        dlg.resize(200,100);
+>      //        dlg.exec();
+>  //        qDebug()<<"模态对话框弹出了";
 > ```
 >
 >
 > ```c
->     //2、非模态创建,要用指针，因为lambda表达式执行完就消失了，所以要用堆区创建对象
->     //        QDialog *dlg2 = new QDialog(this);
->     //        dlg2->resize(200,100);
->     //        dlg2->show();
->     //        dlg2->setAttribute(Qt::WA_DeleteOnClose);//关闭后释放堆区对象，否则一直点，叉掉只是不显示，并没有释放内存，可能导致内存泄漏
->     //        qDebug()<<"非模态窗口弹出了";
+>  //2、非模态创建,要用指针，因为lambda表达式执行完就消失了，所以要用堆区创建对象
+>  //        QDialog *dlg2 = new QDialog(this);
+>  //        dlg2->resize(200,100);
+>  //        dlg2->show();
+>  //        dlg2->setAttribute(Qt::WA_DeleteOnClose);//关闭后释放堆区对象，否则一直点，叉掉只是不显示，并没有释放内存，可能导致内存泄漏
+>  //        qDebug()<<"非模态窗口弹出了";
 > 
->     //消息对话框
->     //1、错误对话框
->     //QMessageBox::critical(this,"错误","发生错误了");
+>  //消息对话框
+>  //1、错误对话框
+>  //QMessageBox::critical(this,"错误","发生错误了");
 > 
->     //2、信息对话框
->     //QMessageBox::information(this,"info","这是信息");
+>  //2、信息对话框
+>  //QMessageBox::information(this,"info","这是信息");
 > 
->     //3、提问对话框 QMessageBox::Save|QMessageBox::Cancel是两个按钮类型，最后的参数是默认回车关联的按钮
+>  //3、提问对话框 QMessageBox::Save|QMessageBox::Cancel是两个按钮类型，最后的参数是默认回车关联的按钮
 > ```
+>
 > ```c
->     //        if(QMessageBox::Save == QMessageBox::question(this,"ques","是否保存？",QMessageBox::Save|QMessageBox::Cancel,QMessageBox::Cancel))
+>  //        if(QMessageBox::Save == QMessageBox::question(this,"ques","是否保存？",QMessageBox::Save|QMessageBox::Cancel,QMessageBox::Cancel))
 > //        {
 > //            qDebug()<<"点击的是保存";
 > //        }else{
 > //            qDebug()<<"点击的是取消";
 > //        }
->     //4、警告对话框
->     //QMessageBox::warning(this,"waring","警告！！！");
+>  //4、警告对话框
+>  //QMessageBox::warning(this,"waring","警告！！！");
 > 
->     //其他对话框
->     //1、颜色对话框
->        //        QColor color = QColorDialog::getColor(QColor(100,100,100));
+>  //其他对话框
+>  //1、颜色对话框
+>     //        QColor color = QColorDialog::getColor(QColor(100,100,100));
 > //        qDebug()<<"rgb="<<color.red()<<color.green()<<color.blue();
->    //2、文件对话框,参数1：父亲；参数2：对话框标题；参数3：默认打开的路径；参数4：默认过滤条件
->     //返回值是打开的文件路径
->        //        QString str =   QFileDialog::getOpenFileName(this,"打开文件","C:\\Users\\onebot\\Desktop","(*.md)");
+> //2、文件对话框,参数1：父亲；参数2：对话框标题；参数3：默认打开的路径；参数4：默认过滤条件
+>  //返回值是打开的文件路径
+>     //        QString str =   QFileDialog::getOpenFileName(this,"打开文件","C:\\Users\\onebot\\Desktop","(*.md)");
 > //        qDebug()<<str;
->    //3、字体对话框
->     bool flag;
->     QFont font =  QFontDialog::getFont(&flag,QFont("微软雅黑",16));
->     qDebug()<<font;
->     qDebug()<<"字体:"<<font.family().toUtf8().data()<<"字号:"<<font.pointSize()<<"是否加粗:"<<font.bold()<<"是否倾斜:"<<font.italic();
+> //3、字体对话框
+>  bool flag;
+>  QFont font =  QFontDialog::getFont(&flag,QFont("微软雅黑",16));
+>  qDebug()<<font;
+>  qDebug()<<"字体:"<<font.family().toUtf8().data()<<"字号:"<<font.pointSize()<<"是否加粗:"<<font.bold()<<"是否倾斜:"<<font.italic();
 > ```
 
 ## ListWidget列表容器
 
 > ```c
 > //设置单选框默认为男
->     ui->rBtnMan->setChecked(true);//设置默认为未婚
+>  ui->rBtnMan->setChecked(true);//设置默认为未婚
 > ui->rBtnNoMarry->setChecked(true);
 > 
 > //选中女后，打印信息
 > connect(ui->rBtnWoman,&QRadioButton::clicked,this,[=](){
->     qDebug()<<"女";
+>  qDebug()<<"女";
 > });
 > 
 > //ikun
 > //stateChanged，state--状态 0->选中（1->半选）2->选中
 > connect(ui->ngm,&QCheckBox::stateChanged,this,[=](int state){
->     qDebug()<<"你干嘛哈哈哎哟"<<state;
+>  qDebug()<<"你干嘛哈哈哎哟"<<state;
 > });
 > 
 > connect(ui->baozha,&QCheckBox::clicked,this,[=](){
->     qDebug()<<"多一眼看一眼就会爆炸";
+>  qDebug()<<"多一眼看一眼就会爆炸";
 > });
 > 
 > connect(ui->ronghua,&QCheckBox::clicked,this,[=](){
->     qDebug()<<"近一点靠近点快被融化";
+>  qDebug()<<"近一点靠近点快被融化";
 > });
 > 
 > connect(ui->rap,&QCheckBox::clicked,[=](){
->     qDebug()<<"唱跳rap篮球music";
+>  qDebug()<<"唱跳rap篮球music";
 > });
 > 
 > //使用QListWidget写一首诗
 > ```
-> ```c
+>
+> ```c++
 > //    QListWidgetItem*item = new QListWidgetItem("锄禾日当午");
 > //    //把诗放到listWidget控件中
 > //    ui->listWidget->addItem(item);
@@ -244,34 +255,34 @@
 > sexList<<"男"<<"女"<<"男"<<"女"<<"男";
 > 
 > for(int i=0;i<5;i++){
->     int col=0;
->     ui->tableWidget->setItem(i,col++,new QTableWidgetItem(nameList[i]));
->     ui->tableWidget->setItem(i,col++,new QTableWidgetItem(sexList.at(i)));
->     //int 转 QString
->     ui->tableWidget->setItem(i,col++,new QTableWidgetItem(QString::number(i+18)));
+>  int col=0;
+>  ui->tableWidget->setItem(i,col++,new QTableWidgetItem(nameList[i]));
+>  ui->tableWidget->setItem(i,col++,new QTableWidgetItem(sexList.at(i)));
+>  //int 转 QString
+>  ui->tableWidget->setItem(i,col++,new QTableWidgetItem(QString::number(i+18)));
 > }
 > ```
 
 ## 栈控件、下拉框、标签动图
 
-> ```c
->  //1、栈控件使用
+> ```c++
+> //1、栈控件使用
 > //设置默认显示页面
 > ui->stackedWidget->setCurrentIndex(0);
 > 
 > //设置滚动页面
 > connect(ui->btn_sroll,&QPushButton::clicked,this,[=](){
->     ui->stackedWidget->setCurrentIndex(0);
+>  ui->stackedWidget->setCurrentIndex(0);
 > });
 > 
 > //设置网页页面
 > connect(ui->btn_Web,&QPushButton::clicked,this,[=](){
->     ui->stackedWidget->setCurrentIndex(1);
+>  ui->stackedWidget->setCurrentIndex(1);
 > });
 > 
 > //设置工具箱页面
 > connect(ui->btn_toolBox,&QPushButton::clicked,this,[=](){
->     ui->stackedWidget->setCurrentIndex(2);
+>  ui->stackedWidget->setCurrentIndex(2);
 > });
 > 
 > //2、下拉框
@@ -281,8 +292,8 @@
 > //点击按钮选中拖拉机选项
 > connect(ui->btn_tlj,&QPushButton::clicked,this,[=](){
 > //        ui->comboBox->setCurrentIndex(2);
->         ui->comboBox->setCurrentText("拖拉机");
->     });
+>      ui->comboBox->setCurrentText("拖拉机");
+>  });
 > //3、使用QLabel显示图片
 > //    ui->label->setPixmap(QPixmap(":/html.svg"));
 > //显示动图
@@ -291,4 +302,3 @@
 > //播放动图
 > movie->start();
 > ```
-> 
