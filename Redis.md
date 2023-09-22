@@ -101,7 +101,7 @@ redis-cli (-h localhost -p 6379 如果是本地登陆可以省略)
 help [command]
 ```
 
-![](https://cdn.staticaly.com/gh/TankingCao/picx-images-hosting@master/CopyQ.PGpyFa.13e3fgmo8pb4.webp)
+<img src="https://github.com/TankingCao/picx-images-hosting/raw/master/CopyQ.PGpyFa.13e3fgmo8pb4.webp" alt="CopyQ" />
 
 > **redis有==16==个数据库(0-15)，默认使用的是==0==，可以使用select切换数据库**
 
@@ -175,7 +175,7 @@ flushall
 
 查看一个或者多个key是否存在，返回个数`exists [key...]`
 
-<img src="https://cdn.staticaly.com/gh/TankingCao/picx-images-hosting@master/CopyQ.WwCwYX.17lc3f7zn400.webp">
+<img src="https://github.com/TankingCao/picx-images-hosting/raw/master/CopyQ.WwCwYX.17lc3f7zn400.webp" alt="CopyQ" />
 
 设置过期时间(多长时间后过期自动从数据库删除)`expire [key] [time] 单位默认是秒`
 
@@ -1177,7 +1177,7 @@ class Redis02SpringbootApplicationTests {
 
 redis中各种数据类型对应的操作方法
 
-![1693648470356](https://cdn.staticaly.com/gh/TankingCao/picx-images-hosting@master/1693648470356.jpg)
+<img src="https://github.com/TankingCao/picx-images-hosting/raw/master/1693648470356.jpg" alt="1693648470356" />
 
 4. ==序列化== ：
    - 在Spring Boot中，序列化是指==将对象转换为可以存储或传输的字节序列的过程==。这可以通过将对象转换为==JSON==或==XML==格式来实现。序列化允许在存储或传输对象时==减少内存使用==，并确保在在不同系统之间交换数据时能够正确表示对象
