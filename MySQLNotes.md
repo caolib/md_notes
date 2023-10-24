@@ -4,20 +4,20 @@
 
 ```sql
 -- 语句编写和执行顺序
-select	-- 4
-	字段列表
-from	-- 1
-	表名列表
-where	-- 2
-	条件列表
+select    -- 4
+    字段列表
+from    -- 1
+    表名列表
+where    -- 2
+    条件列表
 group by --3
-	分组字段列表
-having	 
-	分组后条件列表
+    分组字段列表
+having     
+    分组后条件列表
 order by --5
-	排序字段列表
-limit	 --6
-	分页参数
+    排序字段列表
+limit     --6
+    分页参数
 ```
 
 # 一、数据定义语言DDL
@@ -26,13 +26,12 @@ limit	 --6
 
 > ```sql
 > # DDL-数据库操作
-> show databases; 						 #显示所有数据库
-> create database [if not exists] 数据库名;	#创建数据库
-> use 数据库名 ;							  #使用数据库
-> select database();						  #显示当前在哪个数据库下
-> drop database [if exists] 数据库名;			#删库跑路
+> show databases;                          #显示所有数据库
+> create database [if not exists] 数据库名;    #创建数据库
+> use 数据库名 ;                              #使用数据库
+> select database();                          #显示当前在哪个数据库下
+> drop database [if exists] 数据库名;            #删库跑路
 > ```
->
 
 ## 2、表操作
 
@@ -258,7 +257,6 @@ limit	 --6
 > select count(*) as address_count,workaddress from emp 
 > where age < 45 
 > group by workaddress having address_count >= 3;
-> 
 > ```
 
 ## 4、order by
@@ -296,7 +294,6 @@ limit	 --6
 > select *
 > from emp
 > limit 10,10;
-> 
 > ```
 
 ## 5、案例
@@ -368,7 +365,6 @@ limit	 --6
 > -- 撤销 cxk对clb数据库中所有表操作的所有权限
 > revoke all on clb.* from 'cxk'@'%';
 > ```
->
 
 # 五、 函数
 
@@ -518,16 +514,16 @@ limit	 --6
 > (
 >     id     int primary key auto_increment comment '主键',       
 >     -- primary key:主键，auto_increment:id随插入的数据自动增加，无需插入
->     
+> 
 >     name   varchar(10) not null unique comment '姓名',          
 >     -- not null:不能为空，unique:唯一的，其他行不能出现重复
->     
+> 
 >     age    int check ( age > 0 and age <= 120 ) comment '年龄', 
 >     -- check(条件):必须满足check中的条件
->     
+> 
 >     status char(1) default '1' comment '状态',                  
 >     -- default:没有指定时的默认值
->     
+> 
 >     gender char(1) comment '性别'
 > ) comment '用户表';
 > 
@@ -1120,17 +1116,19 @@ limit	 --6
 ## 3、事务的四大特性（ACID）
 
 > 1. **原子性（Atomicity）：事务是不可分割的最小操作单元，要么全部成功，要么全部失败。**
->2. **一致性（Consistency）：事务完成时，必须使所有的数据都保持一致状态。** 
+> 
+> 2. **一致性（Consistency）：事务完成时，必须使所有的数据都保持一致状态。** 
+> 
 > 3. **隔离性（Isolation）：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立 环境下运行。** 
->
+> 
 > 4. **持久性（Durability）：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。** 
 
 ## 4、并发事务问题
 
 > **脏读：一个事务读取到另外一个事务未提交的数据。**
->
+> 
 > **不可重复读：一个事务先后读取同一条数据，但两次读取到的数据不同。**
->
+> 
 > **幻读：一个事务查询数据时没有对应数据，插入该数据时又发现该数据已经存在，好像出现“幻影”。**
 
 ## 5、隔离级别
@@ -1157,7 +1155,7 @@ limit	 --6
 > ```java
 >         //JDBC快速入门
 > 
-> 		//1、注册驱动
+>         //1、注册驱动
 >         Class.forName("com.mysql.cj.jdbc.Driver");
 > 
 >         //2、获取连接
@@ -1225,20 +1223,18 @@ limit	 --6
 >         stmt.close();
 >         conn.close();
 > /*
-> 	DriverManager有两个作用:
-> 	1、注册驱动
-> 	2、获取数据库连接
+>     DriverManager有两个作用:
+>     1、注册驱动
+>     2、获取数据库连接
 > */
 > ```
->
-> 
 
 ## 3、Connection
 
 > ```java
-> 	//1、管理事务       
+>     //1、管理事务       
 > 
-> 		try {
+>         try {
 >             //开启事务
 >             conn.setAutoCommit(false);//将自动提交改为手动
 > 
@@ -1262,9 +1258,6 @@ limit	 --6
 >             conn.rollback();
 >             e.printStackTrace();
 >         }
-> 
-> 
-> 
 > ```
 
 ## 4、Statement
@@ -1473,7 +1466,6 @@ limit	 --6
 > 
 > }
 > ```
->
 
 ## 6、用户登陆
 
@@ -1562,7 +1554,7 @@ limit	 --6
 >         stmt.close();
 >         conn.close();
 >     }
->     
+> 
 > }
 > ```
 
@@ -1671,4 +1663,3 @@ limit	 --6
 > # 最大等待时间->3秒
 > maxWait=30000
 > ```
-
