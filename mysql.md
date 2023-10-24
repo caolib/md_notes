@@ -521,41 +521,41 @@ limit     --6
 > ```sql
 > create table user2
 > (
->  id     int primary key auto_increment comment '主键',       
->  -- primary key:主键，auto_increment:id随插入的数据自动增加，无需插入
-> 
->  name   varchar(10) not null unique comment '姓名',          
->  -- not null:不能为空，unique:唯一的，其他行不能出现重复
-> 
->  age    int check ( age > 0 and age <= 120 ) comment '年龄', 
->  -- check(条件):必须满足check中的条件
-> 
->  status char(1) default '1' comment '状态',                  
->  -- default:没有指定时的默认值
-> 
->  gender char(1) comment '性别'
-> ) comment '用户表';
-> 
-> -- 插入数据
-> insert into user2(name, age, status, gender) -- id为主键，无需插入，插入也没用，会自动更正
+    id     int primary key auto_increment comment '主键',       
+>        -- primary key:主键，auto_increment:id随插入的数据自动增加，无需插入
+>    
+>     name   varchar(10) not null unique comment '姓名',          
+>        -- not null:不能为空，unique:唯一的，其他行不能出现重复
+>    
+>     age    int check ( age > 0 and age <= 120 ) comment '年龄', 
+>        -- check(条件):必须满足check中的条件
+>    
+>     status char(1) default '1' comment '状态',                  
+>        -- default:没有指定时的默认值
+>    
+>     gender char(1) comment '性别'
+>    ) comment '用户表';
+
+>  -- 插入数据
+>  insert into user2(name, age, status, gender) -- id为主键，无需插入，插入也没用，会自动更正
 > values ('Tom1', 10, 0, '男'),
->     ('Tom2', 10, 0, '男');
-> 
+>   ('Tom2', 10, 0, '男');
+>  
 > insert into user2(name, age, status, gender)
-> values (null, 10, 0, '男'); -- 插入的name不能为null，报错
-> 
+>  values (null, 10, 0, '男'); -- 插入的name不能为null，报错
+>  
 > insert into user2 (name, age, status, gender)
-> values ('Tom1', 11, 0, '男'); -- 插入的name不能重复，报错,虽然没有成功，但是已经申请到主键，所以会空出一个主键
-> 
+>  values ('Tom1', 11, 0, '男'); -- 插入的name不能重复，报错,虽然没有成功，但是已经申请到主键，所以会空出一个主键
+>  
 > insert into user2(name, age, status, gender)
-> values ('Tom3', 80, 0, '男');
-> 
+>  values ('Tom3', 80, 0, '男');
+>
 > insert into user2(name, age, status, gender)
 > values ('Tom3', -1, 0, '男'); -- 插入的年龄超出0~120的范围，报错
 > 
 > insert into user2(name, age, gender)
 > values ('Tom4', 10, '男'); -- 不插入status，插入数据后status值默认为1
-> ```
+>    ```
 
 ## 2、外键约束
 
@@ -1131,19 +1131,25 @@ limit     --6
 ## 3、事务的四大特性（ACID）
 
 > 1. **原子性（Atomicity）：事务是不可分割的最小操作单元，要么全部成功，要么全部失败。**
+<<<<<<< HEAD:MySQLNotes.md
+> 
+> 2. **一致性（Consistency）：事务完成时，必须使所有的数据都保持一致状态。** 
+> 
+=======
 >
 > 2. **一致性（Consistency）：事务完成时，必须使所有的数据都保持一致状态。** 
 >
+>>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
 > 3. **隔离性（Isolation）：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立 环境下运行。** 
->
+> 
 > 4. **持久性（Durability）：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。** 
 
 ## 4、并发事务问题
 
 > **脏读：一个事务读取到另外一个事务未提交的数据。**
->
+> 
 > **不可重复读：一个事务先后读取同一条数据，但两次读取到的数据不同。**
->
+> 
 > **幻读：一个事务查询数据时没有对应数据，插入该数据时又发现该数据已经存在，好像出现“幻影”。**
 
 ## 5、隔离级别
@@ -1170,8 +1176,13 @@ limit     --6
 > ```java
 >      //JDBC快速入门
 > 
+<<<<<<< HEAD:MySQLNotes.md
+>         //1、注册驱动
+>         Class.forName("com.mysql.cj.jdbc.Driver");
+=======
 >      //1、注册驱动
 >      Class.forName("com.mysql.cj.jdbc.Driver");
+>>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
 > 
 >      //2、获取连接
 >      String url = "jdbc:mysql://localhost:3306/clb";
@@ -1238,15 +1249,49 @@ limit     --6
 >      stmt.close();
 >      conn.close();
 > /*
+<<<<<<< HEAD:MySQLNotes.md
+>     DriverManager有两个作用:
+>     1、注册驱动
+>     2、获取数据库连接
+=======
 >  DriverManager有两个作用:
 >  1、注册驱动
 >  2、获取数据库连接
+>>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
 > */
 > ```
 
 ## 3、Connection
 
 > ```java
+<<<<<<< HEAD:MySQLNotes.md
+>     //1、管理事务       
+> 
+>         try {
+>             //开启事务
+>             conn.setAutoCommit(false);//将自动提交改为手动
+> 
+>             //5、执行sql
+>             int count = stmt.executeUpdate(sql);
+>             //6、处理结果
+>             System.out.println("受影响的行数有" + count + "行");
+> 
+>             //制造异常
+>             int i = 3 / 0;
+> 
+>             //5、执行sql
+>             int count2 = stmt.executeUpdate(sql2);
+>             //6、处理结果
+>             System.out.println("受影响的行数有" + count2 + "行");
+> 
+>             //提交事务
+>             conn.commit();
+>         } catch (Exception e) {
+>             //回滚事务
+>             conn.rollback();
+>             e.printStackTrace();
+>         }
+=======
 >  //1、管理事务       
 > 
 >      try {
@@ -1273,6 +1318,7 @@ limit     --6
 >          conn.rollback();
 >          e.printStackTrace();
 >      }
+>>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
 > ```
 
 ## 4、Statement
@@ -1570,6 +1616,15 @@ limit     --6
 >      conn.close();
 >  }
 > 
+<<<<<<< HEAD:MySQLNotes.md
+>         //7、释放资源
+>         rs.close();
+>         stmt.close();
+>         conn.close();
+>     }
+> 
+=======
+>>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
 > }
 > ```
 
@@ -1678,6 +1733,8 @@ limit     --6
 > # 最大等待时间->3秒
 > maxWait=30000
 > ```
+<<<<<<< HEAD:MySQLNotes.md
+=======
 
 # 十、进阶
 
@@ -1988,3 +2045,4 @@ limit     --6
 > ```
 >
 > 
+>>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
