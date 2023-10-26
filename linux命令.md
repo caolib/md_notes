@@ -1,15 +1,13 @@
 ---
 title: linux命令
 date: 2023-08-31 00:59:04
-tags:
-
+categories:
+    - linux 
+    - os
+tags: linux
 ---
 
-
-
 # Linux基础命令
-
-
 
 ## Linux的目录结构
 
