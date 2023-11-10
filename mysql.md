@@ -1131,18 +1131,14 @@ limit     --6
 ## 3、事务的四大特性（ACID）
 
 > 1. **原子性（Atomicity）：事务是不可分割的最小操作单元，要么全部成功，要么全部失败。**
-<<<<<<< HEAD:MySQLNotes.md
-> 
+
 > 2. **一致性（Consistency）：事务完成时，必须使所有的数据都保持一致状态。** 
 > 
-=======
->
 > 2. **一致性（Consistency）：事务完成时，必须使所有的数据都保持一致状态。** 
->
->>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
-> 3. **隔离性（Isolation）：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立 环境下运行。** 
+
+>3. **隔离性（Isolation）：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立 环境下运行。** 
 > 
-> 4. **持久性（Durability）：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。** 
+>4. **持久性（Durability）：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。** 
 
 ## 4、并发事务问题
 
@@ -1173,153 +1169,111 @@ limit     --6
 
 ## 1、jdbc7步编程
 
-> ```java
->      //JDBC快速入门
-> 
-<<<<<<< HEAD:MySQLNotes.md
->         //1、注册驱动
->         Class.forName("com.mysql.cj.jdbc.Driver");
-=======
->      //1、注册驱动
->      Class.forName("com.mysql.cj.jdbc.Driver");
->>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
-> 
->      //2、获取连接
->      String url = "jdbc:mysql://localhost:3306/clb";
->      String username = "root";
->      String password = "123456";
->      Connection conn = null;
->      conn = DriverManager.getConnection(url, username, password);
-> 
-> 
->      //3、定义sql
->      String sql = "update account set money = 666 where id = 1";
-> 
->      //4、获取执行sql的对象 Statement
->      Statement stmt = null;
->      stmt = conn.createStatement();
-> 
-> 
->      //5、执行sql
->      int count = 0;//受影响的行数
->      count = stmt.executeUpdate(sql);
-> 
-> 
->      //6、处理结果
->      System.out.println("受影响的行数有" + count + "行");
-> 
->      //7、释放资源
->      stmt.close();
->      conn.close();
-> ```
+```java
+//JDBC快速入门
+//1、注册驱动
+Class.forName("com.mysql.cj.jdbc.Driver");
+
+//2、获取连接
+String url = "jdbc:mysql://localhost:3306/clb";
+String username = "root";
+String password = "123456";
+Connection conn = null;
+conn = DriverManager.getConnection(url, username, password);
+
+
+//3、定义sql
+String sql = "update account set money = 666 where id = 1";
+
+//4、获取执行sql的对象 Statement
+Statement stmt = null;
+stmt = conn.createStatement();
+
+
+//5、执行sql
+int count = 0;//受影响的行数
+count = stmt.executeUpdate(sql);
+
+
+//6、处理结果
+System.out.println("受影响的行数有" + count + "行");
+
+//7、释放资源
+stmt.close();
+conn.close();
+```
 
 ## 2、DriverManager
 
-> ```java
->      //1、注册驱动 -->可以省略
->      //Class.forName("com.mysql.cj.jdbc.Driver");
-> 
->      //2、获取连接 -->如果连接的是本机的数据库且端口是默认的 3306 则可以简写
-> //        String url = "jdbc:mysql://localhost:3306/clb";
->      //简写：
->      String url = "jdbc:mysql:/clb";
->      String username = "root";
->      String password = "123456";
->      Connection conn = DriverManager.getConnection(url, username, password);
-> 
-> 
->      //3、定义sql
->      String sql = "update account set money = 1000 where id = 1";
-> 
->      //4、获取执行sql的对象 Statement
->      Statement stmt = null;
->      stmt = conn.createStatement();
-> 
-> 
->      //5、执行sql
->      int count = 0;//受影响的行数
->      count = stmt.executeUpdate(sql);
-> 
-> 
->      //6、处理结果
->      System.out.println("受影响的行数有" + count + "行");
-> 
->      //7、释放资源
-> 
->      stmt.close();
->      conn.close();
-> /*
-<<<<<<< HEAD:MySQLNotes.md
->     DriverManager有两个作用:
->     1、注册驱动
->     2、获取数据库连接
-=======
->  DriverManager有两个作用:
->  1、注册驱动
->  2、获取数据库连接
->>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
-> */
-> ```
+```java
+  //1、注册驱动 -->可以省略
+  //Class.forName("com.mysql.cj.jdbc.Driver");
+
+  //2、获取连接 -->如果连接的是本机的数据库且端口是默认的 3306 则可以简写
+  // String url = "jdbc:mysql://localhost:3306/clb";
+  //简写：
+  String url = "jdbc:mysql:/clb";
+  String username = "root";
+  String password = "123456";
+  Connection conn = DriverManager.getConnection(url, username, password);
+
+
+  //3、定义sql
+  String sql = "update account set money = 1000 where id = 1";
+
+  //4、获取执行sql的对象 Statement
+  Statement stmt = null;
+  stmt = conn.createStatement();
+
+
+  //5、执行sql
+  int count = 0;//受影响的行数
+  count = stmt.executeUpdate(sql);
+
+
+  //6、处理结果
+  System.out.println("受影响的行数有" + count + "行");
+
+  //7、释放资源
+
+  stmt.close();
+  conn.close();
+/*
+    DriverManager有两个作用:
+    1、注册驱动
+    2、获取数据库连接
+*/
+```
 
 ## 3、Connection
 
-> ```java
-<<<<<<< HEAD:MySQLNotes.md
->     //1、管理事务       
-> 
->         try {
->             //开启事务
->             conn.setAutoCommit(false);//将自动提交改为手动
-> 
->             //5、执行sql
->             int count = stmt.executeUpdate(sql);
->             //6、处理结果
->             System.out.println("受影响的行数有" + count + "行");
-> 
->             //制造异常
->             int i = 3 / 0;
-> 
->             //5、执行sql
->             int count2 = stmt.executeUpdate(sql2);
->             //6、处理结果
->             System.out.println("受影响的行数有" + count2 + "行");
-> 
->             //提交事务
->             conn.commit();
->         } catch (Exception e) {
->             //回滚事务
->             conn.rollback();
->             e.printStackTrace();
->         }
-=======
->  //1、管理事务       
-> 
->      try {
->          //开启事务
->          conn.setAutoCommit(false);//将自动提交改为手动
-> 
->          //5、执行sql
->          int count = stmt.executeUpdate(sql);
->          //6、处理结果
->          System.out.println("受影响的行数有" + count + "行");
-> 
->          //制造异常
->          int i = 3 / 0;
-> 
->          //5、执行sql
->          int count2 = stmt.executeUpdate(sql2);
->          //6、处理结果
->          System.out.println("受影响的行数有" + count2 + "行");
-> 
->          //提交事务
->          conn.commit();
->      } catch (Exception e) {
->          //回滚事务
->          conn.rollback();
->          e.printStackTrace();
->      }
->>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
-> ```
+```java
+//1、管理事务       
+try {
+    //开启事务
+    conn.setAutoCommit(false);//将自动提交改为手动
+
+    //5、执行sql
+    int count = stmt.executeUpdate(sql);
+    //6、处理结果
+    System.out.println("受影响的行数有" + count + "行");
+
+    //制造异常
+    int i = 3 / 0;
+
+    //5、执行sql
+    int count2 = stmt.executeUpdate(sql2);
+    //6、处理结果
+    System.out.println("受影响的行数有" + count2 + "行");
+
+    //提交事务
+    conn.commit();
+} catch (Exception e) {
+    //回滚事务
+    conn.rollback();
+    e.printStackTrace();
+}
+```
 
 ## 4、Statement
 
@@ -1530,519 +1484,504 @@ limit     --6
 
 ## 6、用户登陆
 
-> ```java
-> package JDBC;
-> 
-> import org.junit.Test;
-> import java.sql.Connection;
-> import java.sql.DriverManager;
-> import java.sql.ResultSet;
-> import java.sql.Statement;
-> 
-> /*
->  用户登陆
-> */
-> 
-> public class UserLoginDemo5 {
-> 
->  @Test
->  public void UserLogin() throws Exception {
->      //1、注册驱动
->      Class.forName("com.mysql.cj.jdbc.Driver");
-> 
->      //2、获取连接
->      String url = "jdbc:mysql://localhost:3306/clb";
->      String username = "root";
->      String password = "123456";
->      Connection conn = null;
->      conn = DriverManager.getConnection(url, username, password);
-> 
->      //接收用户名和密码
->      String name = "cxk";
->      String pwd = "jntm";
-> 
->      String sql = "select * from tb_user where name = '" + name + "' and password = '" + pwd + "'";
-> 
->      //获取Statement对象
->      Statement stmt = conn.createStatement();
-> 
->      //执行sql语句
->      ResultSet rs = stmt.executeQuery(sql);
-> 
->      //判断是否登陆成功
->      System.out.println(rs.next() ? "登陆成功" : "登陆失败");
-> 
->      //7、释放资源
->      rs.close();
->      stmt.close();
->      conn.close();
->  }
-> 
->  /*
->      sql注入问题
->   */
-> 
->  @Test
->  public void UserLogin_Inject() throws Exception {
->      //1、注册驱动
->      Class.forName("com.mysql.cj.jdbc.Driver");
-> 
->      //2、获取连接
->      String url = "jdbc:mysql://localhost:3306/clb";
->      String username = "root";
->      String password = "123456";
->      Connection conn = null;
->      conn = DriverManager.getConnection(url, username, password);
-> 
->      //接收用户名和密码 sql注入->此处密码错误却还能成功登陆
->      String name = "ikunngmngmngm";
->      String pwd = "'or '1' = '1";
-> 
->      String sql = "select * from tb_user where name = '" + name + "' and password = '" + pwd + "'";
-> 
->      //获取Statement对象
->      Statement stmt = conn.createStatement();
-> 
->      //执行sql语句
->      ResultSet rs = stmt.executeQuery(sql);
->      System.out.println("sql = " + sql);
-> 
->      //判断是否登陆成功
->      System.out.println(rs.next() ? "登陆成功" : "登陆失败");
-> 
->      //7、释放资源
->      rs.close();
->      stmt.close();
->      conn.close();
->  }
-> 
-<<<<<<< HEAD:MySQLNotes.md
->         //7、释放资源
->         rs.close();
->         stmt.close();
->         conn.close();
->     }
-> 
-=======
->>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
-> }
-> ```
+```java
+package JDBC;
+
+import org.junit.Test;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+/*
+用户登陆
+*/
+
+public class UserLoginDemo5 {
+
+@Test
+public void UserLogin() throws Exception {
+  //1、注册驱动
+  Class.forName("com.mysql.cj.jdbc.Driver");
+
+  //2、获取连接
+  String url = "jdbc:mysql://localhost:3306/clb";
+  String username = "root";
+  String password = "123456";
+  Connection conn = null;
+  conn = DriverManager.getConnection(url, username, password);
+
+  //接收用户名和密码
+  String name = "cxk";
+  String pwd = "jntm";
+
+  String sql = "select * from tb_user where name = '" + name + "' and password = '" + pwd + "'";
+
+  //获取Statement对象
+  Statement stmt = conn.createStatement();
+
+  //执行sql语句
+  ResultSet rs = stmt.executeQuery(sql);
+
+  //判断是否登陆成功
+  System.out.println(rs.next() ? "登陆成功" : "登陆失败");
+
+  //7、释放资源
+  rs.close();
+  stmt.close();
+  conn.close();
+}
+
+/*
+  sql注入问题
+*/
+
+@Test
+public void UserLogin_Inject() throws Exception {
+  //1、注册驱动
+  Class.forName("com.mysql.cj.jdbc.Driver");
+
+  //2、获取连接
+  String url = "jdbc:mysql://localhost:3306/clb";
+  String username = "root";
+  String password = "123456";
+  Connection conn = null;
+  conn = DriverManager.getConnection(url, username, password);
+
+  //接收用户名和密码 sql注入->此处密码错误却还能成功登陆
+  String name = "ikunngmngmngm";
+  String pwd = "'or '1' = '1";
+
+  String sql = "select * from tb_user where name = '" + name + "' and password = '" + pwd + "'";
+
+  //获取Statement对象
+  Statement stmt = conn.createStatement();
+
+  //执行sql语句
+  ResultSet rs = stmt.executeQuery(sql);
+  System.out.println("sql = " + sql);
+
+  //判断是否登陆成功
+  System.out.println(rs.next() ? "登陆成功" : "登陆失败");
+
+  //7、释放资源
+  rs.close();
+  stmt.close();
+  conn.close();
+}
+```
 
 ## 7、PrepareStatement
 
-> ```java
-> package JDBC;
-> 
-> import org.junit.Test;
-> 
-> import java.sql.*;
-> 
-> /*
->  PrepareStatement解决sql注入问题
->  将sql语句中的敏感符号加\ 进行转义
-> * */
-> 
-> public class PrepareStatementDemo6 {
-> 
->     @Test
->     public void PrepareStatement() throws Exception {
->         //1、注册驱动
->         Class.forName("com.mysql.cj.jdbc.Driver");
-> 
->         //2、获取连接
->         //useSeverPrepStmts=true 开启预编译功能 ：性能更高
->         String url = "jdbc:mysql:/clb?useSSL=false&useSeverPrepStmts=true";
->         String username = "root";
->         String password = "123456";
->         Connection conn = null;
->         conn = DriverManager.getConnection(url, username, password);
-> 
->         //接收用户名和密码 sql注入->此处密码错误却还能成功登陆
->         String name = "ikunngmngmngm";
->         String pwd = "'or '1' = '1";
-> 
->         //定义sql语句
->         String sql = "select * from tb_user where name = ? and password = ?";
-> 
->         //获取Statement对象
->         PreparedStatement pstmt = conn.prepareStatement(sql);
-> 
->         //设置？的值
->         pstmt.setString(1, name);
->         pstmt.setString(2, pwd);
-> 
->         //执行sql语句
->         ResultSet rs = pstmt.executeQuery();
-> 
->         //判断是否登陆成功
->         System.out.println(rs.next() ? "登陆成功" : "登陆失败");
-> 
->         //7、释放资源
->         rs.close();
->         pstmt.close();
->         conn.close();
->     }
-> }
-> ```
+```java
+package JDBC;
+
+import org.junit.Test;
+
+import java.sql.*;
+
+/*
+    PrepareStatement解决sql注入问题
+    将sql语句中的敏感符号加\ 进行转义
+*/
+
+public class PrepareStatementDemo6 {
+
+    @Test
+    public void PrepareStatement() throws Exception {
+        //1、注册驱动
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+        //2、获取连接
+        //useSeverPrepStmts=true 开启预编译功能 ：性能更高
+        String url = "jdbc:mysql:/clb?useSSL=false&useSeverPrepStmts=true";
+        String username = "root";
+        String password = "123456";
+        Connection conn = null;
+        conn = DriverManager.getConnection(url, username, password);
+
+        //接收用户名和密码 sql注入->此处密码错误却还能成功登陆
+        String name = "ikunngmngmngm";
+        String pwd = "'or '1' = '1";
+
+        //定义sql语句
+        String sql = "select * from tb_user where name = ? and password = ?";
+
+        //获取Statement对象
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+
+        //设置？的值
+        pstmt.setString(1, name);
+        pstmt.setString(2, pwd);
+
+        //执行sql语句
+        ResultSet rs = pstmt.executeQuery();
+
+        //判断是否登陆成功
+        System.out.println(rs.next() ? "登陆成功" : "登陆失败");
+
+        //7、释放资源
+        rs.close();
+        pstmt.close();
+        conn.close();
+    }
+}
+```
 
 ## 8、Druid数据库连接池
 
-> ```java
-> package Druid;
-> 
-> /*
->  * Druid数据库连接池
->  * */
-> 
-> import com.alibaba.druid.pool.DruidDataSourceFactory;
-> 
-> import javax.sql.DataSource;
-> import java.io.FileInputStream;
-> import java.sql.Connection;
-> import java.util.Properties;
-> 
-> public class DruidDemo {
->     public static void main(String[] args) throws Exception {
->         //1、导入jar包
->         //2、定义配置文件
->         //3、加载配置文件
-> 
->         //4、获取连接池对象
->         Properties prop = new Properties();
->         prop.load(new FileInputStream("jdbcDemo/src/druid.properties"));
->         DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
-> 
->         //5、获取数据库连接
->         Connection connection = dataSource.getConnection();
->         System.out.println(connection);
-> 
-> 
-> //        System.out.println(System.getProperty("user.dir"));
->     }
-> }
-> 
-> //配置文件（根据具体情况配置）
-> driverClassName=com.mysql.cj.jdbc.Driver
-> url=jdbc:mysql:/clb?useSSL=false&useServerPrepStmts=true
-> username=root
-> password=123456
-> # 初始化连接数量
-> initialSize=5
-> # 最大连接数量
-> maxActive=10
-> # 最大等待时间->3秒
-> maxWait=30000
-> ```
-<<<<<<< HEAD:MySQLNotes.md
-=======
+```java
+package Druid;
+
+/*
+ * Druid数据库连接池
+ * */
+
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+
+import javax.sql.DataSource;
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.util.Properties;
+
+public class DruidDemo {
+    public static void main(String[] args) throws Exception {
+        //1、导入jar包
+        //2、定义配置文件
+        //3、加载配置文件
+
+        //4、获取连接池对象
+        Properties prop = new Properties();
+        prop.load(new FileInputStream("jdbcDemo/src/druid.properties"));
+        DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
+
+        //5、获取数据库连接
+        Connection connection = dataSource.getConnection();
+        System.out.println(connection);
+
+
+//        System.out.println(System.getProperty("user.dir"));
+    }
+}
+
+//配置文件（根据具体情况配置）
+driverClassName=com.mysql.cj.jdbc.Driver
+url=jdbc:mysql:/clb?useSSL=false&useServerPrepStmts=true
+username=root
+password=123456
+# 初始化连接数量
+initialSize=5
+# 最大连接数量
+maxActive=10
+# 最大等待时间->3秒
+maxWait=30000
+```
+
 
 # 十、进阶
 
 ## 	1、索引
 
-> ```mysql
-> -- 索引
-> 
-> -- 查询表中所有索引
-> show index from tb_user;
-> 
-> -- 创建索引:  create index 索引名 on 表名(字段名);
-> -- 给表中name字段创建常规索引
-> create index idx_user_name on tb_user (name);
-> 
-> -- 给表中phone字段创建唯一索引
-> create unique index idx_user_phone on tb_user (phone);
-> 
-> -- 给表中profession,age,status创建联合索引,字段的顺序是有讲究的
-> create index idx_user_pro_age_sta on tb_user (profession, age, status);
-> 
-> -- 给表中email字段创建常规索引
-> create index idx_user_email on tb_user (email);
-> 
-> -- 删除索引:  drop index 索引名 on 表名;
-> drop index idx_user_email on tb_user;
-> 
-> 
-> -- SQL性能分析
-> -- 1、查看各种sql语句的执行频率
-> show global status like 'Com_______';
-> 
-> -- 2、慢查询日志,查询语句执行时间超过指定时间（默认10秒）就会记录到慢查询日志
-> show variables like 'slow_query_log';
-> 
-> 
-> 
-> -- 3、profile 详情
-> -- 查看是否支持profiling
-> select @@have_profiling;
-> 
-> -- 查看profiling是否开启 0-未开启 1-开启
-> select @@profiling;
-> 
-> -- 开启profiling
-> set profiling = 1;
-> 
-> select *
-> from tb_user;
-> 
-> 
-> -- 查看所有查询语句耗时情况
-> show profiles;
-> 
-> -- 查看指定查询语句的各个阶段的耗时
-> -- show profile for query 10;
-> 
-> -- 额外查看sql语句cpu消耗
-> -- show profile cpu for query 10;
-> 
-> 
-> -- 4、explain 执行计划
-> 
-> explain
-> select *
-> from tb_user
-> where id = 1;
-> 
-> 
-> -- 索引的使用
-> /**
-> 1-最左前缀法则：
->  ·最左边的索引必须存在，否则索引全部失效
->  ·如果跳过了某个索引，那么从该索引开始的后面字段的索引失效
-> */
-> 
-> show index from tb_user;
-> 
-> -- 没有跳过索引，索引全部生效
-> explain
-> select *
-> from tb_user
-> where profession = '软件工程'
-> and age = 31
-> and status = '0';
-> 
-> explain
-> select *
-> from tb_user
-> where profession = '软件工程'
-> and age = 31;
-> 
-> explain
-> select *
-> from tb_user
-> where profession = '软件工程';
-> 
-> -- 跳过最左边的索引，索引全部失效
-> explain
-> select *
-> from tb_user
-> where age = 31
-> and status = '0';
-> 
-> -- 跳过age索引，后面的status索引失效，前面的profession索引正常
-> explain
-> select *
-> from tb_user
-> where profession = '软件工程'
-> and status = '0';
-> 
-> -- 查询语句的条件的位置不影响索引是否生效
-> -- 没有跳过任何索引，索引全部生效
-> explain
-> select *
-> from tb_user
-> where status = '0'
-> and age = 31
-> and profession = '软件工程';
-> 
-> /**
-> 2-出现范围查询(>,<)时，后面的索引失效,使用>=,<=不会
-> */
-> 
-> explain
-> select *
-> from tb_user
-> where profession = '软件工程'
-> and age > 30
-> and status = '0';
-> 
-> /**
-> 3-索引运算
->  ·不要在索引上进行运算，否则索引失效
->  ·字符串字段查询时不加单引号，索引失效
-> */
-> 
-> explain
-> select *
-> from tb_user
-> where substring(phone, 10, 2) = '15';
-> 
-> explain
-> select *
-> from tb_user
-> where phone = 17799990004;
-> -- 没用单引号，索引失效
-> 
-> /**
-> 4-模糊匹配
->  ·后面加%/_模糊匹配，索引正常
->  ·前面模糊，索引失效
-> */
-> 
-> explain
-> select *
-> from tb_user
-> where profession like '软件%'; -- 索引有效
-> 
-> 
-> explain
-> select *
-> from tb_user
-> where profession like '%工程';
-> 
-> /**
-> 5-or连接的条件
->  ·只有两个条件都有索引，索引才会生效，否则失效
->  ·解决方法：建立相关字段的索引
-> */
-> explain
-> select *
-> from tb_user
-> where phone = '17799990004'
-> or age = 31; -- phone有索引，但是age没有索引，索引失效
-> 
-> explain
-> select *
-> from tb_user
-> where phone = '17799990004'
-> or id = 1;
-> -- phone 和 id都有索引，索引生效
-> 
-> 
-> /**
-> 6-数据分布影响
->  ·如果MySQL评估使用索引比全表更慢，则放弃索引，大部分数据都符合条件时会出现这种情况
-> */
-> 
-> explain
-> select *
-> from tb_user
-> where phone > '0';
-> -- 所有电话号码都大于0，使用全表扫描
-> 
-> -- 使用了索引，具体使用索引还是不使用索引取决表中的数据，符合条件的数据多->不用，少->用
-> explain
-> select *
-> from tb_user
-> where profession is null;
-> 
-> -- 未使用索引
-> explain
-> select *
-> from tb_user
-> where profession is not null;
-> 
-> 
-> 
-> -- SQL提示:是优化数据库的一个重要手段，就是在sql语句中加入一些人为的提示达到优化操作的目的
-> -- 查询一个字段时，如果同时存在单列索引和联合索引，默认使用联合索引
-> 
-> -- profession有两个索引，默认使用的是联合索引
-> explain
-> select *
-> from tb_user
-> where profession = '软件工程';
-> 
-> -- use index 建议MySQL使用这个索引，至于用不用，取决于MySQL
-> explain
-> select *
-> from tb_user use index (idx_user_pro)
-> where profession = '软件工程';
-> 
-> -- ignore index 忽略索引，指定不会使用该索引
-> explain
-> select *
-> from tb_user ignore index (idx_user_pro)
-> where profession = '软件工程';
-> 
-> -- force index 强制使用，指定必须使用该索引,use可能MySQL并不接受，force强制MySQL使用
-> 
-> -- ---------------------------------------------------------------
-> 
-> ```
->
-> 
+```mysql
+-- 索引
+
+-- 查询表中所有索引
+show index from tb_user;
+
+-- 创建索引:  create index 索引名 on 表名(字段名);
+-- 给表中name字段创建常规索引
+create index idx_user_name on tb_user (name);
+
+-- 给表中phone字段创建唯一索引
+create unique index idx_user_phone on tb_user (phone);
+
+-- 给表中profession,age,status创建联合索引,字段的顺序是有讲究的
+create index idx_user_pro_age_sta on tb_user (profession, age, status);
+
+-- 给表中email字段创建常规索引
+create index idx_user_email on tb_user (email);
+
+-- 删除索引:  drop index 索引名 on 表名;
+drop index idx_user_email on tb_user;
+
+
+-- SQL性能分析
+-- 1、查看各种sql语句的执行频率
+show global status like 'Com_______';
+
+-- 2、慢查询日志,查询语句执行时间超过指定时间（默认10秒）就会记录到慢查询日志
+show variables like 'slow_query_log';
+
+
+
+-- 3、profile 详情
+-- 查看是否支持profiling
+select @@have_profiling;
+
+-- 查看profiling是否开启 0-未开启 1-开启
+select @@profiling;
+
+-- 开启profiling
+set profiling = 1;
+
+select *
+from tb_user;
+
+
+-- 查看所有查询语句耗时情况
+show profiles;
+
+-- 查看指定查询语句的各个阶段的耗时
+-- show profile for query 10;
+
+-- 额外查看sql语句cpu消耗
+-- show profile cpu for query 10;
+
+
+-- 4、explain 执行计划
+
+explain
+select *
+from tb_user
+where id = 1;
+
+
+-- 索引的使用
+/**
+1-最左前缀法则：
+·最左边的索引必须存在，否则索引全部失效
+·如果跳过了某个索引，那么从该索引开始的后面字段的索引失效
+*/
+
+show index from tb_user;
+
+-- 没有跳过索引，索引全部生效
+explain
+select *
+from tb_user
+where profession = '软件工程'
+and age = 31
+and status = '0';
+
+explain
+select *
+from tb_user
+where profession = '软件工程'
+and age = 31;
+
+explain
+select *
+from tb_user
+where profession = '软件工程';
+
+-- 跳过最左边的索引，索引全部失效
+explain
+select *
+from tb_user
+where age = 31
+and status = '0';
+
+-- 跳过age索引，后面的status索引失效，前面的profession索引正常
+explain
+select *
+from tb_user
+where profession = '软件工程'
+and status = '0';
+
+-- 查询语句的条件的位置不影响索引是否生效
+-- 没有跳过任何索引，索引全部生效
+explain
+select *
+from tb_user
+where status = '0'
+and age = 31
+and profession = '软件工程';
+
+/**
+2-出现范围查询(>,<)时，后面的索引失效,使用>=,<=不会
+*/
+
+explain
+select *
+from tb_user
+where profession = '软件工程'
+and age > 30
+and status = '0';
+
+/**
+3-索引运算
+·不要在索引上进行运算，否则索引失效
+·字符串字段查询时不加单引号，索引失效
+*/
+
+explain
+select *
+from tb_user
+where substring(phone, 10, 2) = '15';
+
+explain
+select *
+from tb_user
+where phone = 17799990004;
+-- 没用单引号，索引失效
+
+/**
+4-模糊匹配
+·后面加%/_模糊匹配，索引正常
+·前面模糊，索引失效
+*/
+
+explain
+select *
+from tb_user
+where profession like '软件%'; -- 索引有效
+
+
+explain
+select *
+from tb_user
+where profession like '%工程';
+
+/**
+5-or连接的条件
+·只有两个条件都有索引，索引才会生效，否则失效
+·解决方法：建立相关字段的索引
+*/
+explain
+select *
+from tb_user
+where phone = '17799990004'
+or age = 31; -- phone有索引，但是age没有索引，索引失效
+
+explain
+select *
+from tb_user
+where phone = '17799990004'
+or id = 1;
+-- phone 和 id都有索引，索引生效
+
+
+/**
+6-数据分布影响
+·如果MySQL评估使用索引比全表更慢，则放弃索引，大部分数据都符合条件时会出现这种情况
+*/
+
+explain
+select *
+from tb_user
+where phone > '0';
+-- 所有电话号码都大于0，使用全表扫描
+
+-- 使用了索引，具体使用索引还是不使用索引取决表中的数据，符合条件的数据多->不用，少->用
+explain
+select *
+from tb_user
+where profession is null;
+
+-- 未使用索引
+explain
+select *
+from tb_user
+where profession is not null;
+
+
+
+-- SQL提示:是优化数据库的一个重要手段，就是在sql语句中加入一些人为的提示达到优化操作的目的
+-- 查询一个字段时，如果同时存在单列索引和联合索引，默认使用联合索引
+
+-- profession有两个索引，默认使用的是联合索引
+explain
+select *
+from tb_user
+where profession = '软件工程';
+
+-- use index 建议MySQL使用这个索引，至于用不用，取决于MySQL
+explain
+select *
+from tb_user use index (idx_user_pro)
+where profession = '软件工程';
+
+-- ignore index 忽略索引，指定不会使用该索引
+explain
+select *
+from tb_user ignore index (idx_user_pro)
+where profession = '软件工程';
+
+-- force index 强制使用，指定必须使用该索引,use可能MySQL并不接受，force强制MySQL使用
+
+-- ---------------------------------------------------------------
+
+```
+
+
 
 ## 2、SQL优化
 
-> ```mysql
-> -- SQL优化
-> 
-> -- 1、插入优化:
->  -- 批量插入
->  -- 手动控制事务
->  -- 主键顺序插入
->  -- load指令
-> 
-> select @@local_infile;
-> set global local_infile = 1;
-> 
-> load data local infile 'D:/Edge下载/进阶篇/相关SQL脚本/load_user_100w_sort.sql' into table tb_user fields terminated by ',' lines terminated by '\n';
-> 
-> -- 2、主键优化：
->  -- 尽量降低主键的长度
->  -- 插入数据时，尽量使用顺序插入
->  -- 尽量不要使用UUID或者其他自然主键
->  -- 尽量不对主键进行修改
-> 
-> -- 3、order by 优化：
->  -- using filesort:效率低
->  -- using index:效率高
-> show index from  tb_user; -- Collation:索引的顺序，A->升序，D->降序
-> 
-> explain select age,phone from tb_user order by age,phone;
-> 
-> -- 创建age和phone字段的一个联合索引,根据索引查询，结果不需要再进行排序
-> create index idx_user_age_phone on tb_user(age,phone);
-> 
-> -- 两个条件都是倒序，使用index倒序扫描 Backward index scan; Using index
-> explain select age,phone from tb_user order by age desc,phone desc ;
-> 
-> -- 先对phone排序，再根据age排序,不符合最左前缀法则，Using index; Using filesort
-> explain select age,phone from tb_user order by phone,age;
-> 
-> -- 先对age升序，再对phone降序排序
-> explain select age,phone from tb_user order by age,phone desc;
-> 
-> -- 优化：创建age升序phone降序的索引(默认是升序)
-> create index idx_user_age_phone_ad on tb_user(age,phone desc);
-> 
-> -- 尽量避免使用select*,否则需要所有字段都建立了联合索引才能走索引，否则就是filesort
-> -- 不可避免使用filesort时，可以适当增大排序文件缓冲区大小
-> 
-> -- limit 优化
-> select *
-> from tb_user
-> limit 900000,10;
-> 
-> -- 覆盖索引加子查询的形式
-> select t.*
-> from tb_user t,
->   (select id from tb_user order by id limit 900000,10) e
-> where t.id = e.id;
-> 
-> 
-> -- count()优化
-> -- 效率 count(*) ≈ count(1) > count(主键) > count(字段)
-> select count(*)from tb_user;
-> select count(id)from tb_user;
-> select count(1)from tb_user;
-> select count(username) from tb_user;
-> 
-> -- update 优化
-> -- update更新的数据最好有索引，否则执行update语句时行锁会升级为表锁，并发性能降低
-> 
-> ```
->
-> 
->>>>>>> be06bc46025e1dd4d092c1b57d2912a260c04296:mysql.md
+```mysql
+-- SQL优化
+
+-- 1、插入优化:
+-- 批量插入
+-- 手动控制事务
+-- 主键顺序插入
+-- load指令
+
+select @@local_infile;
+set global local_infile = 1;
+
+load data local infile 'D:/Edge下载/进阶篇/相关SQL脚本/load_user_100w_sort.sql' into table tb_user fields terminated by ',' lines terminated by '\n';
+
+-- 2、主键优化：
+-- 尽量降低主键的长度
+-- 插入数据时，尽量使用顺序插入
+-- 尽量不要使用UUID或者其他自然主键
+-- 尽量不对主键进行修改
+
+-- 3、order by 优化：
+-- using filesort:效率低
+-- using index:效率高
+show index from  tb_user; -- Collation:索引的顺序，A->升序，D->降序
+
+explain select age,phone from tb_user order by age,phone;
+
+-- 创建age和phone字段的一个联合索引,根据索引查询，结果不需要再进行排序
+create index idx_user_age_phone on tb_user(age,phone);
+
+-- 两个条件都是倒序，使用index倒序扫描 Backward index scan; Using index
+explain select age,phone from tb_user order by age desc,phone desc ;
+
+-- 先对phone排序，再根据age排序,不符合最左前缀法则，Using index; Using filesort
+explain select age,phone from tb_user order by phone,age;
+
+-- 先对age升序，再对phone降序排序
+explain select age,phone from tb_user order by age,phone desc;
+
+-- 优化：创建age升序phone降序的索引(默认是升序)
+create index idx_user_age_phone_ad on tb_user(age,phone desc);
+
+-- 尽量避免使用select*,否则需要所有字段都建立了联合索引才能走索引，否则就是filesort
+-- 不可避免使用filesort时，可以适当增大排序文件缓冲区大小
+
+-- limit 优化
+select *
+from tb_user
+limit 900000,10;
+
+-- 覆盖索引加子查询的形式
+select t.*
+from tb_user t,
+(select id from tb_user order by id limit 900000,10) e
+where t.id = e.id;
+
+
+-- count()优化
+-- 效率 count(*) ≈ count(1) > count(主键) > count(字段)
+select count(*)from tb_user;
+select count(id)from tb_user;
+select count(1)from tb_user;
+select count(username) from tb_user;
+
+-- update 优化
+-- update更新的数据最好有索引，否则执行update语句时行锁会升级为表锁，并发性能降低
+
+```
