@@ -729,70 +729,70 @@ limit     --6
 >
 > 右外连接：查询左表所有数据和右表中符合条件的数据
 
-> ```sql
-> -- 外连接演示
-> -- 表结构：emp,dept
-> -- 条件：emp.dept_id = dept.id
-> 
-> -- 左外连接：查询左表所有数据和右、左表相交的数据 left [outer] join...on... outer可以省略，on后面接条件
-> -- 查询所有员工信息和对应部门信息
-> select e.name, d.name
-> from emp e
->       left join dept d on d.id = e.dept_id;
-> 
-> -- 查询右表所有数据和左、右表相交的数据
-> select d.*, e.*
-> from emp e
->       right join dept d on d.id = e.dept_id;
-> -- 左外连接和右外连接可以互相转化，表的顺序换一下就行了（习惯上左外连接）
-> ```
+```sql
+-- 外连接演示
+-- 表结构：emp,dept
+-- 条件：emp.dept_id = dept.id
+
+-- 左外连接：查询左表所有数据和右、左表相交的数据 left [outer] join...on... outer可以省略，on后面接条件
+-- 查询所有员工信息和对应部门信息
+select e.name, d.name
+from emp e
+   left join dept d on d.id = e.dept_id;
+
+-- 查询右表所有数据和左、右表相交的数据
+select d.*, e.*
+from emp e
+   right join dept d on d.id = e.dept_id;
+-- 左外连接和右外连接可以互相转化，表的顺序换一下就行了（习惯上左外连接）
+```
 
 ### 自连接
 
-> ```sql
-> -- 自连接（自连接时要给表起别名用于区分哪张表）
-> 
-> -- 表结构：emp
-> -- 内自连接
-> -- 查询员工及其所属领导的名字
-> select e1.name, e2.name
-> from emp e1,
->   emp e2
-> where e1.managerid = e2.id;
-> 
-> -- 外自连接
-> -- 查询员工及其所属领导的名字，没有领导也要查询出来
-> select a.name '员工', b.name '领导'
-> from emp a
->       left join emp b on a.managerid = b.id;
-> ```
+```sql
+-- 自连接（自连接时要给表起别名用于区分哪张表）
+
+-- 表结构：emp
+-- 内自连接
+-- 查询员工及其所属领导的名字
+select e1.name, e2.name
+from emp e1,
+emp e2
+where e1.managerid = e2.id;
+
+-- 外自连接
+-- 查询员工及其所属领导的名字，没有领导也要查询出来
+select a.name '员工', b.name '领导'
+from emp a
+   left join emp b on a.managerid = b.id;
+```
 
 ## union查询
 
-> ```sql
-> -- 联合查询 union ，union all
-> -- 将薪资低于5000和年龄大于50的员工全部查询出来
-> 
-> -- union all 相当于把两张表直接加起来，所以有可能有重复的员工
-> select name
-> from emp
-> where salary < 5000
-> union all
-> select name
-> from emp
-> where age > 50;
-> 
-> -- union 对union all结果去重
-> select name
-> from emp
-> where salary < 5000
-> union
-> select name
-> from emp
-> where age > 50;
-> 
-> -- 查询的列数必须相同，字段类型也必须相同
-> ```
+```sql
+-- 联合查询 union ，union all
+-- 将薪资低于5000和年龄大于50的员工全部查询出来
+
+-- union all 相当于把两张表直接加起来，所以有可能有重复的员工
+select name
+from emp
+where salary < 5000
+union all
+select name
+from emp
+where age > 50;
+
+-- union 对union all结果去重
+select name
+from emp
+where salary < 5000
+union
+select name
+from emp
+where age > 50;
+
+-- 查询的列数必须相同，字段类型也必须相同
+```
 
 ## 3、子查询
 
@@ -1749,8 +1749,8 @@ where id = 1;
 -- 索引的使用
 /**
 1-最左前缀法则：
-·最左边的索引必须存在，否则索引全部失效
-·如果跳过了某个索引，那么从该索引开始的后面字段的索引失效
+	最左边的索引必须存在，否则索引全部失效
+ 	如果跳过了某个索引，那么从该索引开始的后面字段的索引失效
 */
 
 show index from tb_user;
@@ -1810,8 +1810,8 @@ and status = '0';
 
 /**
 3-索引运算
-·不要在索引上进行运算，否则索引失效
-·字符串字段查询时不加单引号，索引失效
+    ·不要在索引上进行运算，否则索引失效
+    ·字符串字段查询时不加单引号，索引失效
 */
 
 explain
@@ -1827,8 +1827,8 @@ where phone = 17799990004;
 
 /**
 4-模糊匹配
-·后面加%/_模糊匹配，索引正常
-·前面模糊，索引失效
+    ·后面加%/_模糊匹配，索引正常
+    ·前面模糊，索引失效
 */
 
 explain
@@ -1844,8 +1844,8 @@ where profession like '%工程';
 
 /**
 5-or连接的条件
-·只有两个条件都有索引，索引才会生效，否则失效
-·解决方法：建立相关字段的索引
+    ·只有两个条件都有索引，索引才会生效，否则失效
+    ·解决方法：建立相关字段的索引
 */
 explain
 select *
