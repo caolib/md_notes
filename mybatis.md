@@ -161,8 +161,6 @@ ms.password=123456
 
 ### Mapper.xml映射文件
 
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
