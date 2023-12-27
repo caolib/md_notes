@@ -5,6 +5,8 @@ categories:
     - linux 
     - os
 tags: linux
+cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/qz/wallhaven-qzpj95.png?w=2560&h=1440&fmt=webp
+stick: 900
 ---
 
 # Linux基础命令

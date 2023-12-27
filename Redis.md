@@ -5,6 +5,8 @@ categories:
     - 数据库
     - sql
 tags: redis
+cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/o5/wallhaven-o526l5.png?w=2560&h=1440&fmt=webp
+stick: 966
 ---
 
 # [Redis](https://redis.io/)

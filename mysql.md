@@ -5,6 +5,8 @@ categories:
     - 数据库
     - sql
 tags: mysql
+cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/l8/wallhaven-l8jo3p.png?w=2560&h=1440&fmt=webp
+stick: 990
 ---
 
 # MySQL

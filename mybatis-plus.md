@@ -7,6 +7,8 @@ tags:
   - java
 categories:
   - java
+cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/7p/wallhaven-7prg73.png?w=2560&h=1440&fmt=webp
+stick: 996
 ---
 
 # mybatis-plus
@@ -35,55 +37,55 @@ categories:
 
 >为了简化单表CRUD，mp已经提供了对于单表的CRUD操作的接口`BaseMapper`,直接继承BaseMapper接口即可直接使用
 
-![image-20230912223108185](https://gitee.com/clibin/image-bed/raw/master/202309122231328.png)
+![](https://gitee.com/clibin/image-bed/raw/master/202309122231328.png)
 
 ### 1.3 测试CRUD
 
 > 测试BaseMapper中对单表CRUD操作
 
 ```java
-    @Test
-    public void testInsert() {
-        User user = new User();
-        //user.setId(5L);
-        user.setUsername("ikun23");
-        user.setPassword("123");
-        user.setPhone("18688990011");
-        user.setBalance(200);
-        user.setInfo(UserInfo.of(24,"英语老师","female"));
-        user.setCreateTime(LocalDateTime.now());
-        user.setUpdateTime(LocalDateTime.now());
-        userMapper.insert(user);
-    }
+@Test
+public void testInsert() {
+    User user = new User();
+    //user.setId(5L);
+    user.setUsername("ikun23");
+    user.setPassword("123");
+    user.setPhone("18688990011");
+    user.setBalance(200);
+    user.setInfo(UserInfo.of(24,"英语老师","female"));
+    user.setCreateTime(LocalDateTime.now());
+    user.setUpdateTime(LocalDateTime.now());
+    userMapper.insert(user);
+}
 
-    @Test
-    public void testSelectById() {
-        User user = userMapper.selectById(4L);
-        System.out.println(user);
-    }
+@Test
+public void testSelectById() {
+    User user = userMapper.selectById(4L);
+    System.out.println(user);
+}
 
-    @Test
-    public void testSelectByIds() {
-        List<User> users = userMapper.selectBatchIds(List.of(1, 2, 3));
-        users.forEach(System.out::println);
-    }
+@Test
+public void testSelectByIds() {
+    List<User> users = userMapper.selectBatchIds(List.of(1, 2, 3));
+    users.forEach(System.out::println);
+}
 
-    @Test
-    public void testUpdate() {
-        User user = new User();
-        user.setId(5L);
-        user.setBalance(3);
-        user.setInfo(UserInfo.of(24,"英语老师","female"));
-        user.setCreateTime(LocalDateTime.now());
-        user.setUpdateTime(LocalDateTime.now());
+@Test
+public void testUpdate() {
+    User user = new User();
+    user.setId(5L);
+    user.setBalance(3);
+    user.setInfo(UserInfo.of(24,"英语老师","female"));
+    user.setCreateTime(LocalDateTime.now());
+    user.setUpdateTime(LocalDateTime.now());
 
-        userMapper.updateById(user);
-    }
+    userMapper.updateById(user);
+}
 
-    @Test
-    public void testDelete() {
-        System.out.println(userMapper.deleteById(5L));
-    }
+@Test
+public void testDelete() {
+    System.out.println(userMapper.deleteById(5L));
+}
 ```
 
 > 总结：只要继承了`BaseMapper`，就能直接对单表进行CRUD操作！
@@ -470,7 +472,7 @@ MybatisPlus不仅提供了BaseMapper，还提供了通用的Service接口及默�
 
 由于`Service`中经常需要定义与业务有关的自定义方法，因此我们不能直接使用`IService`，而是自定义`Service`接口，然后继承`IService`以拓展方法。同时，让自定义的`Service实现类`继承`ServiceImpl`，这样就不用自己实现`IService`中的接口了，如下图(**绿色为接口，蓝色为实现类**)
 
-![image-20230913173320621](https://gitee.com/clibin/image-bed/raw/master/202309131733746.png)
+![](https://gitee.com/clibin/image-bed/raw/master/202309131733746.png)
 
 ```java
 //自定义接口继承IService接口，需要指定泛型
