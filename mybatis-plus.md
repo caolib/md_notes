@@ -15,7 +15,8 @@ stick: 996
 
 ## 简介
 
-> [MyBatis-Plus](https://github.com/baomidou/mybatis-plus)（简称 MP）是一个 [MyBatis](https://www.mybatis.org/mybatis-3/)的增强工具，在 MyBatis 的基础上==只做增强不做改变==，为简化开发、提高效率而生。
+> [MyBatis-Plus](https://github.com/baomidou/mybatis-plus)（简称 MP）是一个 [MyBatis](https://www.mybatis.org/mybatis-3/)的增强工具，在 MyBatis 的基础上==只做增强不做改变==，为简化开发、提高效率而生。(先了解[[mybatis]]框架)
+
 
 ![](https://www.baomidou.com/img/relationship-with-mybatis.png)
 

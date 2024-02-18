@@ -72,6 +72,7 @@ stick: 999
 
 > 核心配置文件`mybatis-config.xml`示例
 
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
@@ -391,4 +392,6 @@ Emp getByFirstNameEmp(String name);
 ```
 
 > 更多动态SQL用法见[官网](https://mybatis.org/mybatis-3/zh/dynamic-sql.html)
+>
+> 接下来，了解进阶框架==mybatis-plus==
 
