@@ -45,7 +45,9 @@ const instance = axios.create({baseURL});
 export default instance;
 ```
 
-2.在`vite.config.js`文件中添加配置，将`/api`删除，替换为`http://localhost:8080`,这样就相当于使用前端服务发送请求而不是浏览器，解决了跨域请求
+2.在`vite.config.js`文件中添加配置，将`/api`删除，替换为`http://localhost:8080`,这样就相当于使用前端服务发送请求而不是浏览器，解决了==跨域请求问题==
+
+![image-20240220005351559](https://gitee.com/clibin/image-bed/raw/master/202402200053764.png)
 
 ```js
 export default defineConfig({
