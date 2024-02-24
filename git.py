@@ -42,4 +42,3 @@ while True:
         if isinstance(e, ValueError):
             os.system('git status')
         print('Invalid choice')
-
