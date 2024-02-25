@@ -1,5 +1,5 @@
 ---
-title: redis二次校验实现jwt“失效”
+title: redis二次校验实现jwt主动“失效”
 date: 2024-02-19 17:34:34
 categories: 
     - redis
