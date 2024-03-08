@@ -1,7 +1,8 @@
 ---
 title: C++
 date: 2023-07-28 21:03:14
-categories: c++
+categories: 
+    - c++
 tags: c++
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/3l/wallhaven-3lrw69.jpg?w=2560&h=1440&fmt=webp
 stick: 888

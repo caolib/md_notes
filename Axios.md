@@ -21,13 +21,13 @@ stick: 99
 
 使用npm安装：
 
-```cmd
+```sh
 npm install axios
 ```
 
 使用yarn安装：
 
-```cmd
+```sh
 yarn add axios
 ```
 

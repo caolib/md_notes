@@ -6,7 +6,7 @@ categories:
   - vue
 tags:
   - pinia
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/l8/wallhaven-l82kpr.jpg?w=2560&h=1440&fmt=webp
+cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/1p/wallhaven-1p2zj3.jpg?w=2560&h=1440&fmt=webp
 stick: 300
 ---
 

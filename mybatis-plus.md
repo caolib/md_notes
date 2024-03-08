@@ -287,10 +287,10 @@ void testUpdateWrapper() {
 
 无论是QueryWrapper还是UpdateWrapper在构造条件的时候都需要写死字段名称，可能会出现字符串写错的现象，因此MybatisPlus又提供了一套基于Lambda的Wrapper，包含两个：
 
-- LambdaQueryWrapper
-- LambdaUpdateWrapper
+- `LambdaQueryWrapper`
+- `LambdaUpdateWrapper`
 
-分别对应QueryWrapper和UpdateWrapper
+分别对应`QueryWrapper`和`UpdateWrapper`
 
 ```mysql
 select id,username,info,balance 
@@ -319,7 +319,7 @@ UPDATE user SET balance = balance - 200 WHERE id in (1, 2, 4);
 
 #### 4.2.1 基本使用
 
-在演示UpdateWrapper的案例中，我们在代码中编写了更新的SQL语句：
+在演示`UpdateWrapper`的案例中，我们在代码中编写了更新的SQL语句：
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/27967491/1688133292238-a0f07be7-b115-4970-95d0-2f36bf68cc19.png#averageHue=%23f8fbf6&clientId=uea9a4aab-c071-4&from=paste&height=362&id=u502de218&originHeight=449&originWidth=1067&originalType=binary&ratio=1.2395833730697632&rotation=0&showTitle=false&size=98085&status=done&style=none&taskId=u903bfb55-ce92-4788-af0e-33eeeabe260&title=&width=860.773081650515)
 这种写法在某些企业也是不允许的，因为SQL语句最好都维护在持久层，而不是业务层。就当前案例来说，由于条件是in语句，只能将SQL写在Mapper.xml文件，利用foreach来生成动态SQL。
 这实在是太麻烦了。假如查询条件更复杂，动态SQL的编写也会更加复杂。

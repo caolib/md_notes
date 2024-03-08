@@ -2,14 +2,15 @@ import os
 
 def show():
     print('---------------------------------------------------------')
-    print('enter ---> git status')
-    print('1     ---> git add .')
-    print('2     ---> git commit -m "message"')
-    print('3     ---> git push')
-    print('4     ---> git pull')
-    print('5     ---> git add . & git commit -m "message" & git push')
-    print('6     ---> git log')
-    print('else  ---> exit')
+    print('enter ---> 状态')
+    print('1     ---> 添加')
+    print('2     ---> 提交')
+    print('3     ---> 推送')
+    print('4     ---> 拉取')
+    print('5     ---> 添加、提交、推送')
+    print('6     ---> 日志')
+    print('7     ---> 远程仓库')
+    print('else  ---> 退出')
     print('---------------------------------------------------------')
 
 while True:
@@ -36,6 +37,8 @@ while True:
             print(f'message:{message}')
         elif choice == 6:
             os.system('git glog')
+        elif choice == 7:
+            os.system('git remote -v')
         else:
             exit()
     except Exception as e:
