@@ -2,8 +2,8 @@
 title: SpringBoot相关配置
 date: 2024-01-07 13:10:42
 categories: 
-    - spring
     - java
+    - spring
 tags: 
   - spring
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/5g/wallhaven-5gr5m7.jpg?w=2560&h=1440&fmt=webp

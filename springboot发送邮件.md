@@ -2,8 +2,8 @@
 title: SpringBoot发送邮件
 date: 2024年3月3日17:45:58
 categories: 
-    - spring
     - java
+    - spring
 tags: 
   - 邮件
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/kx/wallhaven-kxj3l1.jpg?w=2560&h=1440&fmt=webp

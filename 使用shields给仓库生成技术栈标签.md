@@ -24,13 +24,11 @@ stick: 999
 
 也可以指定版本号`mytag-v1.2.3-blue`，注意版本号在颜色前面![version](https://img.shields.io/badge/mytag-v1.2.3-blue?style=flat)
 
-
-
 ## 3.图标
 
 [Simple Icons](https://simpleicons.org/) 提供了很多产品的logo，比如我想使用redis的logo，直接搜索redis，点击右下角可以复制名字，左下角可以复制配色
 
-<img src="https://gitee.com/clibin/image-bed/raw/master/image-20240308143650593.png" alt="image-20240308143650593" style="zoom: 50%;" />
+<img src="https://gitee.com/clibin/image-bed/raw/master/image-20240308143650593.png" alt="image-20240308143650593"  />
 
 返回sheilds页面，点击展开显示更多参数
 
@@ -40,4 +38,14 @@ stick: 999
 
 ## 4.动态生成标签
 
-to be continued……
+以仓库提交数为例，搜索commit,注意==cacheSeconds==的设置
+
+<img src="https://gitee.com/clibin/image-bed/raw/master/image-20240309173715898.png" alt="image-20240309173715898" style="zoom:80%;" />
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/tankingcao/java_design?style=flat&labelColor=red&cacheSeconds=3600)
+
+|     标签     |    搜索关键字    |                             示例                             |
+| :----------: | :--------------: | :----------------------------------------------------------: |
+|  仓库提交数  |     `commit`     | ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/tankingcao/java_design?style=flat&labelColor=red&cacheSeconds=3600) |
+| 仓库发行版本 | `github release` | ![GitHub Release](https://img.shields.io/github/v/release/tankingcao/java_design?include_prereleases&sort=date&display_name=release&style=flat&cacheSeconds=3600) |
+

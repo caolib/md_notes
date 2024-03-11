@@ -10,6 +10,8 @@ stick: 888
 
 # C++核心编程
 
+[![pFyS4QH.jpg](https://s21.ax1x.com/2024/03/09/pFyS4QH.jpg)](https://imgse.com/i/pFyS4QH)
+
 本阶段主要针对C++==面向对象==编程技术做详细讲解，探讨C++中的核心和精髓。
 
 ## 1 内存分区模型
