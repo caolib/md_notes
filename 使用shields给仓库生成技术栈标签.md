@@ -4,8 +4,7 @@ date: 2024-03-08 14:17:48
 tags:
   - shields.io
   - 标签
-categories:
-  - tools
+categories: tools
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/ex/wallhaven-exrqrr.jpg?w=2560&h=1440&fmt=webp
 stick: 999
 ---

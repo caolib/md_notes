@@ -1,16 +1,14 @@
 ---
-title: SpringBoot相关配置
+title: springboot相关配置
 date: 2024-01-07 13:10:42
-categories: 
-    - java
-    - spring
+categories: 后端
 tags: 
-  - spring
+  - springboot
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/5g/wallhaven-5gr5m7.jpg?w=2560&h=1440&fmt=webp
 stick: 955
 ---
 
-# SpringBoot相关配置
+# springboot相关配置
 
 ## 1.[自定义项目LOGO](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.spring-application.banner)
 

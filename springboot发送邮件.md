@@ -1,16 +1,15 @@
 ---
-title: SpringBoot发送邮件
+title: springboot发送邮件
 date: 2024年3月3日17:45:58
-categories: 
-    - java
-    - spring
+categories: 后端
 tags: 
   - 邮件
+  - springboot
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/kx/wallhaven-kxj3l1.jpg?w=2560&h=1440&fmt=webp
 stick: 955
 ---
 
-# SpringBoot发送邮件
+# springboot发送邮件
 
 ## 导入依赖
 

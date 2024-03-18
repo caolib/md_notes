@@ -1,11 +1,10 @@
 ---
 title: redis二次校验实现jwt主动“失效”
 date: 2024-02-19 17:34:34
-categories: 
-    - redis
-    - jwt
+categories: 后端
 tags: 
   - redis
+  - jwt
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/jx/wallhaven-jxyopy.png?w=2560&h=1440&fmt=webp
 stick: 201
 ---

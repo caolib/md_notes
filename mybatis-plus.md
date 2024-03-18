@@ -5,8 +5,7 @@ tags:
   - mysql
   - mybatis
   - java
-categories:
-  - java
+categories: 后端
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/7p/wallhaven-7prg73.png?w=2560&h=1440&fmt=webp
 stick: 996
 ---

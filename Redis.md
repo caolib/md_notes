@@ -1,10 +1,11 @@
 ---
 title: Redis
 date: 2023-08-31 20:59:08
-categories: 
-    - 数据库
-    - sql
-tags: redis
+categories: 数据库
+tags: 
+  - redis
+  - 数据库
+  - NOSQL
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/o5/wallhaven-o526l5.png?w=2560&h=1440&fmt=webp
 stick: 966
 ---

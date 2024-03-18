@@ -1,10 +1,10 @@
 ---
 title: mysql
 date: 2023-07-28 21:21:26
-categories: 
-    - 数据库
-    - sql
-tags: mysql
+categories: 数据库
+tags: 
+  - mysql
+  - 数据库
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/l8/wallhaven-l8jo3p.png?w=2560&h=1440&fmt=webp
 stick: 990
 ---

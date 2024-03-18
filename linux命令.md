@@ -1,9 +1,7 @@
 ---
 title: linux命令
 date: 2023-08-31 00:59:04
-categories:
-    - linux 
-    - os
+categories: os
 tags: linux
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/qz/wallhaven-qzpj95.png?w=2560&h=1440&fmt=webp
 stick: 900
