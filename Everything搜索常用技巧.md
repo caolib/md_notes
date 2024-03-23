@@ -1,5 +1,5 @@
 ---
-title: Everything搜索常用技巧
+title: everything极速搜索
 date: 2024-02-18 15:18:12
 tags:
   - everything
