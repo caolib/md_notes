@@ -6,4 +6,4 @@
 note/
 .\README.md
 .cpp
-.exe
+*.exe
