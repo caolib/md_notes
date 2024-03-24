@@ -13,6 +13,14 @@ stick: 666
 
 ## gateway
 
+网关的**核心功能特性**：
+
+- 请求路由
+- 权限控制
+- 限流
+
+> **网关就像是看门大爷，只有校验身份的请求才能访问到后面的微服务**
+
 `Spring Cloud Gateway` 是一个基于 Spring 5、Spring Boot 2 和 Project Reactor 的 **API 网关**，以下是使用 Spring Cloud Gateway 的基本步骤：
 
 1. **添加依赖**：在 Maven 的 `pom.xml` 文件中，添加 Spring Cloud Gateway 的依赖。
@@ -31,14 +39,14 @@ stick: 666
 spring:
   cloud:
     gateway:
-      routes:
-      - id: reader_route
-        uri: lb://reader-service
-        predicates:
+      routes: # 路由配置
+      - id: reader_route # id,自定义但是保证唯一
+        uri: lb://reader-service # 可以直接填写服务地址,此处只是指名服务名称,可以实现负载均衡,lb即loadbalance
+        predicates: # 断言,路径必须是 reader 开头
         - Path=/reader/**
 ```
 
-3. **添加拦截器**
+3. **添加JWT拦截器**
 
 ```java
 @Component

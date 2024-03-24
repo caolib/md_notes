@@ -9,7 +9,7 @@ cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/l8/wallhaven-l8gg
 stick: 478
 ---
 
-# quickstart
+# 快速入土
 
 ## 下载
 
@@ -75,6 +75,53 @@ spring:
 
 ![image-20240316204044294](https://s2.loli.net/2024/03/16/uUS8oGh4OliKAVF.png)
 
+------
+
+# 配置管理
+
+1. 新建`bootstrap.yml`文件，此文件优先级很高，可以在启动时优先读取，将nacos配置放在这个文件中
+
+```yml
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        file-extension: yml # 文件后缀名
+  application:
+    name: gateway-service
+```
+
+2. 在nacos控制台创建配置文件
+
+![image-20240324224923143](https://gitee.com/clibin/image-bed/raw/master/image-20240324224923143.png)
+
+配置文件的名字为`{application.name}-{dev/test}.yml`
+
+![image-20240324225122126](https://gitee.com/clibin/image-bed/raw/master/image-20240324225122126.png)
+
+配置内容一般为开关之类的配置，填写后点击发布
+
+3. 读取配置
+
+```yml
+config:
+  name: "cao"
+  
+```
+
+使用`@ConfigurationProperties`注解可以实现配置的热更新(配置发布后项目中配置立即更新)
+
+```java
+@Component
+@Data
+@ConfigurationProperties(prefix = "config")
+public class ConfigProperties {
+    public String name;
+}
+```
 
 
-> to be continued……
+
