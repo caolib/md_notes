@@ -429,7 +429,7 @@ Markdown 图片语法格式如下：
 
 打开`conf.user.json`文件，添加快捷键，快捷键名称必须是在菜单栏中存在的，这是我设置的一些快捷键
 
-![image-20240323141230241](https://gitee.com/clibin/image-bed/raw/master/image-20240323141230241.png)
+![image-20240323141230241](https://s2.loli.net/2024/04/01/dkI7sJr6v1nXw3j.png)
 
 
 
