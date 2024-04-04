@@ -25,7 +25,7 @@ stick: 999
 
 ## 3.图标
 
-[Simple Icons](https://simpleicons.org/) 提供了很多产品的logo，比如我想使用redis的logo，直接搜索redis，点击右下角可以复制名字，左下角可以复制配色
+[Simple Icons](https://simpleicons.org/zh-CN/) (这个网站可能有~~亿~~点卡)提供了很多产品的logo，比如我想使用redis的logo，直接搜索redis，点击右下角可以复制名字，左下角可以复制配色
 
 <img src="https://img2.imgtp.com/2024/04/04/o6Z8qcbg.png" alt="image-20240308143650593"  />
 
