@@ -33,7 +33,7 @@ stick: 478
 
 3. 我表示：在`terminal`中添加一个powershell的配置，设置启动目录为nacos的bin目录，修改startup为nacos
 
-   ![image-20240316202535951](https://raw.githubusercontent.com/TankingCao/picx-images-hosting/master/image-20240316202535951.png)
+   ![image-20240316202535951](https://img2.imgtp.com/2024/04/04/rIiefetU.png)
 
 启动后默认端口为`8848`，可以在`conf/application.properties`文件中修改`server.port`
 
@@ -96,11 +96,11 @@ spring:
 
 2. 在nacos控制台创建配置文件
 
-![image-20240324224923143](https://gitee.com/clibin/image-bed/raw/master/image-20240324224923143.png)
+![image-20240324224923143](https://img2.imgtp.com/2024/04/04/GU95oOv7.png)
 
 配置文件的名字为`{application.name}-{dev/test}.yml`
 
-![image-20240324225122126](https://gitee.com/clibin/image-bed/raw/master/image-20240324225122126.png)
+![image-20240324225122126](https://img2.imgtp.com/2024/04/04/stfNxt9H.png)
 
 配置内容一般为开关之类的配置，填写后点击发布
 
@@ -122,6 +122,3 @@ public class ConfigProperties {
     public String name;
 }
 ```
-
-
-

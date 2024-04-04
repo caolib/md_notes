@@ -26,12 +26,12 @@ stick: 123
 
 5. 操作，22:55触发，240秒后启动，也就是22:59关机
 
-![image-20240319224152722](https://gitee.com/clibin/image-bed/raw/master/image-20240319224152722.png)
+![image-20240319224152722](https://img2.imgtp.com/2024/04/04/JB9cJCiy.png)
 
 6. 条件
 
-![image-20240319224409803](https://gitee.com/clibin/image-bed/raw/master/image-20240319224409803.png)
+![image-20240319224409803](https://img2.imgtp.com/2024/04/04/1CTTQHty.png)
 
-7. 设置![image-20240319224442431](https://gitee.com/clibin/image-bed/raw/master/image-20240319224442431.png)
+7. 设置![image-20240319224442431](https://img2.imgtp.com/2024/04/04/vZu4bFVM.png)
 
 最后保存即可，这样就能在断电前一分钟让电脑自动关机了，可以通过查看执行记录看看任务有没有正常执行或者自己写一个脚本添加在关机指令之后的第二条指令

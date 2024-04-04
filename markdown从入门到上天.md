@@ -84,7 +84,7 @@ ___粗斜体文本___
 
 脚注是对文本的**补充说明**,鼠标悬浮后会显示内容,脚注一般放在文章最后
 
-![recording](https://img2.imgtp.com/2024/04/03/DAlhn5RI.gif)
+![recording](https://img2.imgtp.com/2024/04/04/K3w12Fo0.gif)
 
 ```markdown
 我会使用[^markdown]
@@ -247,7 +247,7 @@ Markdown 图片语法格式如下：
 - 图片的链接也可以定义为变量后使用变量名使用
 - **如果要改变图片大小，只能使用`img`标签设定相应属性**
 
-![boqi](https://img2.imgtp.com/2024/04/03/EblMf6FV.gif "头要甩掉了...")
+![boqi](https://img2.imgtp.com/2024/04/04/A1kg7et8.gif "头要甩掉了...")
 
 
 
@@ -342,7 +342,7 @@ Markdown 图片语法格式如下：
 - [ ] Contact the media
 ```
 
-![image-20240323144532355](https://img2.imgtp.com/2024/04/03/cODQyDld.png)
+![image-20240323144532355](https://img2.imgtp.com/2024/04/04/7kFSR5OI.png)
 
 - [x] Write the press release
 - [ ] Update the website
@@ -369,7 +369,7 @@ Markdown 图片语法格式如下：
 真好笑！ :joy:
 ```
 
-![image-20240323144459538](https://img2.imgtp.com/2024/04/03/TTkNZ2bU.png)
+![image-20240323144459538](https://img2.imgtp.com/2024/04/04/Z7UFAt5A.png)
 
 **Note:** 注意：您可以使用此[表情符号简码列表](https://gist.github.com/rxaviers/7360908)，但请记住，表情符号简码因应用程序而异。有关更多信息，请参阅Markdown应用程序的文档
 
@@ -383,7 +383,7 @@ Markdown 图片语法格式如下：
 
 > 
 
-![image-20240323133251040](https://img2.imgtp.com/2024/04/03/7yKy0otK.png)
+![image-20240323133251040](https://img2.imgtp.com/2024/04/04/jnRNJQXi.png)
 
 示例：假设我想修改**引用前面竖杠**的颜色
 
@@ -399,11 +399,11 @@ Markdown 图片语法格式如下：
 
 - 样式中信息说明这个属性在`maize.css`文件第`188`行
 
-![image-20240323134839413](https://img2.imgtp.com/2024/04/03/eUNijQrF.png)
+![image-20240323134839413](https://img2.imgtp.com/2024/04/04/4UwdspQr.png)
 
 - 先复制修改好的颜色属性，找到`maize.css`(这是我使用的主题文件,不同主题是不一样的)
 
-  ![image-20240323135320144](https://img2.imgtp.com/2024/04/03/rOH4sidm.png)
+  ![image-20240323135320144](https://img2.imgtp.com/2024/04/04/d2MqWoFJ.png)
 
 - 修改对应属性并保存
 
@@ -419,13 +419,13 @@ Markdown 图片语法格式如下：
 
 可以使用一些免费图床([ImgTP](https://www.imgtp.com/),[SM.MS](https://sm.ms/)),或者使用`github/gitee`搭建免费图床(**并不推荐**),可自行上网搜索怎么使用
 
-![image-20240323140334497](https://img2.imgtp.com/2024/04/03/FtWlr7Ab.png)
+![image-20240323140334497](https://img2.imgtp.com/2024/04/04/ridGMJBj.png)
 
 ### 自定义快捷键
 
 打开高级设置
 
-![image-20240323140954338](https://img2.imgtp.com/2024/04/03/ACgM0NDr.png)
+![image-20240323140954338](https://img2.imgtp.com/2024/04/04/yPFwQOv7.png)
 
 打开`conf.user.json`文件，添加快捷键，快捷键名称必须是在菜单栏中存在的，这是我设置的一些快捷键
 
@@ -443,6 +443,3 @@ Markdown 图片语法格式如下：
 
 [markdown]:https://markdown.com.cn/
 [home]:https://clibin.vercel.app "我的博客主页"
-
-
-
