@@ -387,18 +387,35 @@ a = \log_{10}100
 $$
 
 - 分数: `$\frac {a} {b}$` $\frac{a}{b}$
+
 - 根号: `$\sqrt[3]{x^4}$` $\sqrt[3]{x^4}$
+
 - 点乘: `a \cdot b` $a \cdot b$​
+
 - 叉乘: `$a \times b$` $a \times b$
+
 - 上标: `a^2 b^{1+2}` $a^2$  $b^{1+2}$ **如果上标是表达式,则加{},下同**
+
 - 下标: `a_i` $a_6$ $a_{1+3}$
 
 - 积分: `\int_{a}^{b}` $\int_{a}^{b}$
-- 求和: `\sum_{1}^{10}` $\sum_{a}^{b}$
-- 极限: `\lim_{趋近值}` $\lim_{{x \to \infty}}$ `\to`表示趋于,`\infty`表示无穷
+
+- 求和:  $\sum_{a}^{b}$​
+
+  ```latex
+  \sum_{1}^{10}
+  ```
+
+- 极限: $\lim_{{x \to \infty}}$​ `\to`表示趋于,`\infty`表示无穷
+
+  ```latex
+  \lim_{{x \to \infty}}
+  ```
 
 - 正弦: `\sin{}` $\sin{x}$
+
 - 余弦: `\cos{}` $\cos{(y+x)}$
+
 - 对数: `\log_{6}` $\log_{6}10$
 
 ## typora
