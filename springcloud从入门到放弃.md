@@ -9,7 +9,7 @@ cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/m3/wallhaven-m3y6
 stick: 666
 ---
 
-# springcloud从入门到放弃
+# [springcloud](https://sca.aliyun.com/zh-cn/)从入门到放弃
 
 ## gateway
 
@@ -197,3 +197,7 @@ public class JwtTokenInterceptor implements GlobalFilter, Ordered {
    ```
 
 ## 待续……
+
+
+
+[最佳实践示例 | Spring Cloud Alibaba](https://sca.aliyun.com/zh-cn/docs/2023.0.0.0-RC1/best-practice/integrated-example)
