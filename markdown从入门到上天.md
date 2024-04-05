@@ -5,7 +5,7 @@ categories:
     - tools
 tags: markdown
 cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/gp/wallhaven-gpxxq7.jpg?w=2560&h=1440&fmt=webp
-stick: 105
+sticky: 7777
 ---
 
 [toc]
