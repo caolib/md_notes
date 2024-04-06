@@ -10,6 +10,8 @@ sticky: 7777
 
 [toc]
 
+# Markdown
+
 ## 简介
 
 > [Markdown][markdown] 是一种轻量级的标记语言，可用于在纯文本文档中添加格式化元素。Markdown 由 John Gruber 于 2004 年创建，如今已成为世界上最受欢迎的标记语言之一
@@ -93,8 +95,6 @@ ___粗斜体文本___
 ```
 
 我会使用[^markdown]
-
-
 
 [^markdown]:Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档
 
@@ -429,7 +429,11 @@ $$
 
 - 重启typora
 
-> 这个方法可以修改typora中大部分元素的样式，如果你会css的话，也可以直接修改主题的css文件
+> 你也可以直接将修改好css属性直接粘贴到主题css文件的最后进行覆盖，这样就不用找对应的css在哪了
+>
+> <span style="color:#ff6b6b;font-weight:bold;">最推荐的办法是在主题文件夹下创建一个文件名为 你使用的主题.user.css文件(例如我使用的是maize,则为maize.user.css)，将要修改的属性直接加入这个文件即可</span>
+>
+> **这种办法适用于typora中大多数样式**
 
 ------
 
@@ -453,13 +457,9 @@ $$
 
 
 
-
-
-
-
-
+------
 
 
 
 [markdown]:https://markdown.com.cn/
-[home]:https://clibin.vercel.app "我的博客主页"
+[home]:https://caolib.github.io "我的博客主页"
