@@ -232,9 +232,9 @@ public void test() throws IOException {
 }
 ```
 
-> 但是每次使用都要写这一串代码，==有点麻烦==，前面获取SqlSession对象的代码是固定代码，将这段固定代码提取到工具类`MybatisUtils`，使用工具类的静态方法获取SqlSession对象
+> 但是每次使用都要写这一串代码，**有点麻烦**，前面获取SqlSession对象的代码是固定代码，将这段固定代码提取到工具类`MybatisUtils`，使用工具类的静态方法获取SqlSession对象
 
-> ==MybatisUtils工具类示例==
+> **MybatisUtils工具类示例**
 
 ```java
 //sqlSessionFactory --> sqlSession
