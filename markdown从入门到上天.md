@@ -395,7 +395,11 @@ $$
 - 积分: **\int_{a}^{b}** $\int_{a}^{b}$
 - 正弦: \sin{} $\sin{x}$
 - 余弦: \cos{} $\cos{(y+x)}$
-- 对数: **\log_{6}** $\log_{6}10$
+- 对数: **\log_{6}** $\log_{6}10$​
+- 大于号：\(\textgreater) $\textgreater$
+- 小于号：\(\textless)
+- 大于等于：\(\geq) $\geq$
+- 小于等于：\(\leq) $\leq$
 
 ## typora
 
