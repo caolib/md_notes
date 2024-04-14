@@ -399,7 +399,39 @@ $$
 - 大于号：\(\textgreater) $\textgreater$
 - 小于号：\(\textless)
 - 大于等于：\(\geq) $\geq$
-- 小于等于：\(\leq) $\leq$
+- 小于等于：\(\leq) $\leq$​
+
+### github风格警告框
+
+<img src="https://img2.imgtp.com/2024/04/14/519OjPJs.png" alt="image-20240414094352692" style="zoom:50%;" />
+
+> [!NOTE]
+>
+> 提醒 `> [!note]` 该风格警告框适用于github，其他网站不保证兼容性
+
+> [!TIP]
+>
+> 建议 `> [!tip]`
+
+> [!IMPORTANT]
+>
+> 重要 `[!important]`
+
+> [!WARNING]
+>
+> 警告 `[!warning]`
+
+> [!CAUTION]
+>
+> 注意 `[!caution]`
+
+
+
+IFrame标签嵌入,src可以是网址
+
+<iframe src="https://github.com/caolib" width="1920" height="1080" scrolling="no"> </iframe>
+
+
 
 ## typora
 
