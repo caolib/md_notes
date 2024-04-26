@@ -5,11 +5,13 @@ categories: 测试
 tags: 
     - apifox
     - 测试
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/2y/wallhaven-2y2q7y.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/MFf0YXPB.jpeg
 sticky: 8888
 ---
 
-# [Apifox](https://apifox.com/help/)
+# Apifox
+
+[官方文档](https://apifox.com/help/)
 
 ## 登录自动更新token
 

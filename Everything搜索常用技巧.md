@@ -6,11 +6,13 @@ tags:
   - 搜索
 categories:
   - tools
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/d6/wallhaven-d6dvdl.png?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/npP2lwWl.png
 stick: 700
 ---
 
-# 各种带条件搜索
+
+
+# everything
 
 ## 1.指定文件后缀
 

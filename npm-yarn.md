@@ -5,7 +5,7 @@ categories:
     - 前端
     - nodejs
 tags: npm
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/m3/wallhaven-m3vrl1.png?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/6Yu6WOXx.png
 stick: 99
 ---
 

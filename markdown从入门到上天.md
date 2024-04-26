@@ -4,7 +4,7 @@ date: 2024-03-01 22:13:26
 categories: 
     - tools
 tags: markdown
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/gp/wallhaven-gpxxq7.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/mwI2iUAu.jpeg
 sticky: 7777
 ---
 

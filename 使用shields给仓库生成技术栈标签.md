@@ -5,7 +5,7 @@ tags:
   - shields.io
   - 标签
 categories: tools
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/ex/wallhaven-exrqrr.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/HTuh0tt1.jpeg
 stick: 999
 ---
 

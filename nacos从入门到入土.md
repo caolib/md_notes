@@ -5,7 +5,7 @@ categories: 后端
 tags: 
   - springcloud
   - nacos
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/l8/wallhaven-l8gg1r.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/Ekm1nLB8.jpeg
 stick: 478
 ---
 
