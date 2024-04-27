@@ -3,7 +3,7 @@ title: linux命令
 date: 2023-08-31 00:59:04
 categories: os
 tags: linux
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/qz/wallhaven-qzpj95.png?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/vSmYRYLp.png
 stick: 900
 ---
 

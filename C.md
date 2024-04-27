@@ -3,7 +3,7 @@ title: C++
 date: 2023-07-28 21:03:14
 categories: 后端
 tags: c++
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/3l/wallhaven-3lrw69.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/qcD2fLzw.jpeg
 stick: 888
 ---
 

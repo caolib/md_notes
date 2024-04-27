@@ -5,7 +5,7 @@ categories: 后端
 tags: 
   - redis
   - jwt
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/jx/wallhaven-jxyopy.png?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/oVoIaabg.jpeg
 stick: 201
 ---
 

@@ -6,7 +6,7 @@ tags:
   - mybatis
   - java
 categories: 后端
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/7p/wallhaven-7prg73.png?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/dAtgB1Oy.jpeg
 stick: 996
 ---
 

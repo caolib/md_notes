@@ -5,7 +5,7 @@ categories: 后端
 tags: 
   - springcloud
   - gateway
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/m3/wallhaven-m3y67m.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/naT60HXW.jpeg
 stick: 666
 ---
 

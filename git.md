@@ -4,7 +4,7 @@ date: 2024-3-25 21:45:03
 categories: 
     - tools
 tags: git
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/3l/wallhaven-3lgrr3.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/RNcBwZxV.jpeg
 stick: 9999
 ---
 

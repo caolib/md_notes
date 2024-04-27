@@ -4,7 +4,7 @@ date: 2024-01-07 13:10:42
 categories: 后端
 tags: 
   - springboot
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/5g/wallhaven-5gr5m7.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/4AzC8Fg3.jpeg
 stick: 955
 ---
 

@@ -4,7 +4,7 @@ date: 2024-03-19 22:28:39
 categories: os
 tags: 
     - windows
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/9d/wallhaven-9dgpxd.png?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/zzTq9wAc.png
 stick: 123
 ---
 

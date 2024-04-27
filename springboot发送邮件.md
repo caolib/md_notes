@@ -5,7 +5,7 @@ categories: 后端
 tags: 
   - 邮件
   - springboot
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/kx/wallhaven-kxj3l1.jpg?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/crgCyh4I.jpeg
 stick: 955
 ---
 

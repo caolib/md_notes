@@ -6,7 +6,7 @@ tags:
   - redis
   - 数据库
   - NOSQL
-cover: https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/o5/wallhaven-o526l5.png?w=2560&h=1440&fmt=webp
+cover: https://img2.imgtp.com/2024/04/26/uXIQ2MgX.jpeg
 stick: 966
 ---
 
