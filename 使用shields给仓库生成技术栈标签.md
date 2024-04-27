@@ -1,8 +1,8 @@
 ---
-title: 使用shields给仓库生成技术栈标签
+title: shields-技术栈标签
 date: 2024-03-08 14:17:48
 tags:
-  - shields.io
+  - shields
   - 标签
 categories: tools
 cover: https://img2.imgtp.com/2024/04/26/HTuh0tt1.jpeg
