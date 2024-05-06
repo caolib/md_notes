@@ -45,7 +45,7 @@ const instance = axios.create({baseURL});
 export default instance;
 ```
 
-2.在`vite.config.js`文件中添加配置，将`/api`删除，替换为`http://localhost:8080`,这样就相当于使用前端服务发送请求而不是浏览器，解决了==跨域请求问题==
+2.在`vite.config.js`文件中添加配置，将`/api`删除，替换为`http://localhost:8080`,这样就相当于使用前端服务发送请求而不是浏览器，解决了跨域请求问题
 
 ![image-20240220005351559](https://img2.imgtp.com/2024/04/04/bfhkucvh.png)
 
@@ -82,7 +82,7 @@ export default defineConfig({
 
 ## 3.拦截器
 
-这是axios发送请求的一个示例，项目中会有很多这样的请求要发送，我们会发现==发送请求==和==接收响应数据==之前，我们都会做一些相同的事情，比如，**发送请求之前我们都会给请求头中带上token**，**接收响应时我们都会先判断状态码**，我们不妨将这些动作用一个统一的函数来实现，这就需要使用拦截器
+这是axios发送请求的一个示例，项目中会有很多这样的请求要发送，我们会发现发送请求和接收响应数据之前，我们都会做一些相同的事情，比如，**发送请求之前我们都会给请求头中带上token**，**接收响应时我们都会先判断状态码**，我们不妨将这些动作用一个统一的函数来实现，这就需要使用拦截器
 
 ```js
 axios.post('/user', {
@@ -97,7 +97,7 @@ axios.post('/user', {
   });
 ```
 
-这是一个==响应拦截器==的示例，axios会自动适配响应的http状态码为4xx或5xx的请求为失败回调，在失败回调中我们可以对各种状态码的失败回调统一处理，成功回调中如果自定义的code为0也表示有错误，这种统一处理的方式类似于Spring中的`AOP`
+这是一个响应拦截器的示例，axios会自动适配响应的http状态码为4xx或5xx的请求为失败回调，在失败回调中我们可以对各种状态码的失败回调统一处理，成功回调中如果自定义的code为0也表示有错误，这种统一处理的方式类似于Spring中的`AOP`
 
 ```js
 //响应拦截器，状态码为2xx时执行成功回调，否则执行失败回调
@@ -105,7 +105,7 @@ instance.interceptors.response.use(
     //成功回调
     (result) => {
         // 如果状态码为0，后端发生异常
-        if (result.data.code === 0) {
+        if (result.data.code = 0) {
             ElMessage.error(result.data.msg);
             return Promise.reject(result);
         }
@@ -116,10 +116,10 @@ instance.interceptors.response.use(
         // 状态码为401,419都跳转到登录界面
         if (error.response) {
             const code = error.response.status;
-            if (code === 401) {
+            if (code = 401) {
                 ElMessage({message: '请先登录！', type: "error",});
                 router.push('/login');
-            } else if (code === 419) {
+            } else if (code = 419) {
                 ElMessage.error("身份已过期,请重新登录！");
                 router.push('/login');
             } else {
@@ -132,7 +132,7 @@ instance.interceptors.response.use(
 );
 ```
 
-这是一个==请求拦截器==的示例，在发送请求之前先判断是否有token，如果有就在请求头上带上token再发送请求，否则跳转到登录页面，当然，登录和注册请求都不需要token，可以直接发送请求
+这是一个请求拦截器的示例，在发送请求之前先判断是否有token，如果有就在请求头上带上token再发送请求，否则跳转到登录页面，当然，登录和注册请求都不需要token，可以直接发送请求
 
 ```js
 // 请求拦截器
@@ -178,7 +178,7 @@ instance.interceptors.response.use(
     //成功回调
     (result) => {
         // 如果状态码为0，后端发生异常
-        if (result.data.code === 0) {
+        if (result.data.code = 0) {
             ElMessage.error(result.data.msg);
             return Promise.reject(result);
         }
@@ -189,10 +189,10 @@ instance.interceptors.response.use(
         // 状态码为401,419都跳转到登录界面
         if (error.response) {
             const code = error.response.status;
-            if (code === 401) {
+            if (code = 401) {
                 ElMessage({message: '请先登录！', type: "error",});
                 router.push('/login');
-            } else if (code === 419) {
+            } else if (code = 419) {
                 ElMessage.error("身份已过期,请重新登录！");
                 router.push('/login');
             } else {

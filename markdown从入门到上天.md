@@ -66,10 +66,10 @@ ___粗斜体文本___
 
 ### 删除线
 
-如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 **~~** 即可，实例如下：~~tankingcao.github.io~~
+如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 **~~** 即可，实例如下：~~clb.pages.dev~~
 
 ```markdown
-~~tankingcao.github.io~~
+~~clb.pages.dev~~
 ```
 
 ### 下划线
@@ -194,18 +194,18 @@ print(666)
 
 #### 基本使用
 
-[我的主页](https://tankingcao.github.io)
+[我的主页](https://clb.pages.dev)
 
 ```markdown
-[我的主页](https://tankingcao.github.io)
+[我的主页](https://clb.pages.dev)
 ```
 
 #### 直接使用链接
 
-<https://tankingcao.github.io>
+<https://clb.pages.dev>
 
 ```markdown
-<https://tankingcao.github.io>
+<https://clb.pages.dev>
 ```
 
 #### 高级链接
@@ -219,7 +219,7 @@ print(666)
 
 这还是我的[主页][home]
 
-[home]:https://clibin.github.io
+[home]:https://clb.pages.dev
 ```
 
 这是我的[主页][home]
@@ -505,4 +505,4 @@ $$
 
 
 [markdown]:https://markdown.com.cn/
-[home]:https://caolib.github.io "我的博客主页"
+[home]:https://clb.pages.dev "我的博客主页"
