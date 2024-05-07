@@ -11,8 +11,6 @@ stick: 99
 
 ## [Axios](https://www.axios-http.cn/)
 
-> [!TIP]
->
 > Axios是什么？
 >
 > Axios 是一个基于 *[promise](https://javascript.info/promise-basics)* 网络请求库，作用于[node.js](https://nodejs.org/) 和浏览器中。 它是 *[isomorphic](https://www.lullabot.com/articles/what-is-an-isomorphic-application)* 的(即同一套代码可以运行在浏览器和node.js中)。在服务端它使用原生 node.js `http` 模块, 而在客户端 (浏览端) 则使用 XMLHttpRequests
@@ -33,7 +31,7 @@ yarn add axios
 
 ## 2.包装统一请求工具
 
-因为后端地址是一样的，假设是localhost:8080，只是请求路径不一样，我们可以定义一个baseURL，此处使用`/api`是为了解决跨域问题
+因为后端地址是一样的，假设是localhost:8080，只是请求路径不一样，我们可以定义一个baseURL，此处使用`/api`是为了解决**跨域问题**
 
 1.先包装一个工具`request.js`
 
@@ -97,7 +95,7 @@ axios.post('/user', {
   });
 ```
 
-这是一个响应拦截器的示例，axios会自动适配响应的http状态码为4xx或5xx的请求为失败回调，在失败回调中我们可以对各种状态码的失败回调统一处理，成功回调中如果自定义的code为0也表示有错误，这种统一处理的方式类似于Spring中的`AOP`
+这是一个响应拦截器的示例，axios会自动适配响应的http**状态码为4xx或5xx的请求为失败回调**，在失败回调中我们可以**对各种状态码的失败回调统一处理**，成功回调中如果自定义的code为0也表示有错误，这种统一处理的方式类似于Spring中的`AOP`
 
 ```js
 //响应拦截器，状态码为2xx时执行成功回调，否则执行失败回调
@@ -132,7 +130,7 @@ instance.interceptors.response.use(
 );
 ```
 
-这是一个请求拦截器的示例，在发送请求之前先判断是否有token，如果有就在请求头上带上token再发送请求，否则跳转到登录页面，当然，登录和注册请求都不需要token，可以直接发送请求
+这是一个请求拦截器的示例，在发送请求之前先判断是否有token，如果有就在请求头上带上token再发送请求，否则跳转到登录页面，当然，**登录和注册请求都不需要token**，可以直接发送请求
 
 ```js
 // 请求拦截器
