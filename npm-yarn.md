@@ -5,7 +5,7 @@ categories:
     - 前端
     - nodejs
 tags: npm
-cover: https://img2.imgtp.com/2024/04/26/6Yu6WOXx.png
+cover: https://files.codelife.cc/wallhaven/full/mp/wallhaven-mpjj91.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp
 stick: 99
 ---
 

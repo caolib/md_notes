@@ -4,7 +4,7 @@ date: 2024-3-25 21:45:03
 categories: 
     - tools
 tags: git
-cover: https://img2.imgtp.com/2024/04/26/RNcBwZxV.jpeg
+cover: https://files.codelife.cc/wallhaven/full/42/wallhaven-42z9em.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp
 stick: 9999
 ---
 
