@@ -5,7 +5,7 @@ categories: 后端
 tags: 
   - springcloud
   - nacos
-cover: https://img2.imgtp.com/2024/04/26/Ekm1nLB8.jpeg
+cover: 
 stick: 478
 ---
 
