@@ -1,14 +1,10 @@
 ---
-title: 测试用
-date: 2024-6-4 16:06:41
-categories: 
-    - test
-tags: git
-cover: 
-stick: 9999
+title: test
+date: 2024-06-04 16:17:32
+tags:
 ---
 
-![image-20240604160825329](assets/image-20240604160825329.png)
+![image-20240604160825329](image-20240604160825329.png)
 
 
 
