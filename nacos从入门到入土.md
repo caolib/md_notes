@@ -5,7 +5,7 @@ categories: 后端
 tags: 
   - springcloud
   - nacos
-cover: 
+cover: https://files.codelife.cc/wallhaven/full/ym/wallhaven-yml8wd.png?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp
 stick: 478
 ---
 
