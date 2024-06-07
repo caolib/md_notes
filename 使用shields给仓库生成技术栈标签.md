@@ -5,11 +5,11 @@ tags:
   - shields
   - 标签
 categories: tools
-cover: https://img2.imgtp.com/2024/04/26/HTuh0tt1.jpeg
+cover: https://s2.loli.net/2024/06/07/agix2nv7zhCYGJj.webp
 stick: 999
 ---
 
-![image-20240308142105903](https://img2.imgtp.com/2024/04/04/yYJX845U.png)
+![image-20240607223717241](https://s2.loli.net/2024/06/07/4hlYq7RUw93zWGZ.png)
 
 > github仓库页面的这种标签是怎么生成的？
 

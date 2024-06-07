@@ -5,7 +5,7 @@ categories: 后端
 tags: 
   - springcloud
   - gateway
-cover: https://files.codelife.cc/wallhaven/full/28/wallhaven-283ry9.png?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp
+cover: https://s2.loli.net/2024/06/07/HiWVoEZNrKnb4va.webp
 stick: 666
 ---
 
