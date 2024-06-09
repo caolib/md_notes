@@ -5,7 +5,7 @@ categories: 测试
 tags: 
     - apifox
     - 测试
-cover: https://files.codelife.cc/wallhaven/full/nr/wallhaven-nr87wm.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp
+cover: https://s2.loli.net/2024/06/09/MgYqOejQcICpFsP.webp
 sticky: 8888
 ---
 
