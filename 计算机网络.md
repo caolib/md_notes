@@ -1259,7 +1259,7 @@ sticky: 10000
 
 #### 2. 三报文握手
 
-![](https://clb.pages.dev/img/pics/image-20231203193842118 .png)
+![](https://clb.pages.dev/img/pics/image-20231203193842118.png)
 
 > **思考：第三次确认<mark>是否多余</mark>，<mark>能不能两报文握手？</mark>**
 >
