@@ -63,4 +63,4 @@ sticky: 8888
 
 对于常见的开发框架，`Apifox Helper` 插件能够做到开箱即用，实现真正的代码零侵入。如下图所示，仅通过识别最基本的 SpringBoot 代码，即可生成一份详尽的 API 文档：
 
-![](https://img2.imgtp.com/2024/04/04/hiEguc1i.png)
+![](https://cdn.apifox.cn/uploads/help/202401101156728.png)

@@ -13,7 +13,7 @@ stick: 966
 
 ## 什么是Nosql
 
-> ==NoSQL==	>>>>>	==not only sql==,不仅仅是sql(不是没有sql)
+> ==NoSQL==	-> ==not only sql==,不仅仅是sql(不是没有sql)
 
 Nosql特点
 
@@ -22,7 +22,6 @@ Nosql特点
 3. 数据类型是多样的！（不需要事先设计数据库！随取随用！如果是数据量非常大的表，关系型数据库就很难设计了！）
 4. 传统==RDBMS==(关系型数据库管理系统)和==NoSQL==
 
-```java
 RDBMS的特点：
 
 - 基于关系模型，使用表格的存储方式，数据按照行和列进行组织。
@@ -30,9 +29,9 @@ RDBMS的特点：
 - 强调ACID规则（原子性、一致性、隔离性、持久性），可以保证数据的完整性和一致性，适合处理高要求的事务操作。
 - 通常只能进行纵向扩展，即增加单个服务器的硬件资源来提高性能，这种方式成本高昂且有上限。
 - 适合处理结构化或半结构化的数据，需要进行复杂查询或分析的场景，例如金融、电商、教育等领域。
-```
 
-```java
+
+
 NoSQL的特点：
 
 - 不基于关系模型，使用键值对、文档、图形等多种存储方式，数据的结构和格式可以灵活变化，不需要预先定义。
@@ -40,7 +39,6 @@ NoSQL的特点：
 - 通常只提供弱一致性或最终一致性的保证，不能支持复杂的事务操作，但可以提高数据的可用性和并发性。
 - 通常可以进行横向扩展，即增加多个服务器来分担数据和负载，这种方式成本低廉且可以无限扩展。
 - 适合处理非结构化或多变的数据，需要高并发或海量数据存储的场景，例如社交网络、游戏、物联网等领域。
-```
 
 大数据时代的3V:主要是描述问题的
 
@@ -103,7 +101,7 @@ redis-cli (-h localhost -p 6379 如果是本地登陆可以省略)
 help [command]
 ```
 
-<img src="https://img2.imgtp.com/2024/04/04/4WG8EHcc.webp" alt="CopyQ" />
+<img src="https://github.com/TankingCao/picx-images-hosting/raw/master/CopyQ.PGpyFa.13e3fgmo8pb4.webp" alt="CopyQ" />
 
 > **redis有==16==个数据库(0-15)，默认使用的是==0==，可以使用select切换数据库**
 
@@ -177,7 +175,7 @@ flushall
 
 查看一个或者多个key是否存在，返回个数`exists [key...]`
 
-<img src="https://img2.imgtp.com/2024/04/04/kOLycrII.webp" alt="CopyQ" />
+<img src="https://s2.loli.net/2024/09/27/R2JGgMxC94EhyTk.webp" alt="CopyQ" />
 
 设置过期时间(多长时间后过期自动从数据库删除)`expire [key] [time] 单位默认是秒`
 
@@ -1179,15 +1177,10 @@ class Redis02SpringbootApplicationTests {
 
 redis中各种数据类型对应的操作方法
 
-<img src="https://img2.imgtp.com/2024/04/04/HHpI88A1.jpg" alt="1693648470356" />
+<img src="https://s2.loli.net/2024/09/27/Iy2QGasZbTcLlYW.jpg" alt="1693648470356" />
 
 4. ==序列化== ：
    - 在Spring Boot中，序列化是指==将对象转换为可以存储或传输的字节序列的过程==。这可以通过将对象转换为==JSON==或==XML==格式来实现。序列化允许在存储或传输对象时==减少内存使用==，并确保在在不同系统之间交换数据时能够正确表示对象
    - 实体类一般都要序列化，`implements Serializable`实现序列化接口就可以了，默认使用的是JDK序列化,也可以使用其他json工具实现，因为默认的jdk序列化存储中文到redis会出现乱码
 
 ---
-
-
-
-
-

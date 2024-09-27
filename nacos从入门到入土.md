@@ -5,11 +5,10 @@ categories: 后端
 tags: 
   - springcloud
   - nacos
-cover: https://s2.loli.net/2024/06/07/f1vmkl74TSUuIG3.webp
 stick: 478
 ---
 
-# 快速入土
+# quickstart
 
 ## 下载
 
@@ -33,7 +32,7 @@ stick: 478
 
 3. 我表示：在`terminal`中添加一个powershell的配置，设置启动目录为nacos的bin目录，修改startup为nacos
 
-   ![image-20240316202535951](https://img2.imgtp.com/2024/04/04/rIiefetU.png)
+   ![image-20240316202535951](https://s2.loli.net/2024/09/27/P5qZoVzsy6c9O1L.png)
 
 启动后默认端口为`8848`，可以在`conf/application.properties`文件中修改`server.port`
 
@@ -75,52 +74,6 @@ spring:
 
 ![image-20240316204044294](https://s2.loli.net/2024/03/16/uUS8oGh4OliKAVF.png)
 
-------
-
-# 配置管理
-
-1. 新建`bootstrap.yml`文件，此文件优先级很高，可以在启动时优先读取，将nacos配置放在这个文件中
-
-```yml
-spring:
-  profiles:
-    active: dev
-  cloud:
-    nacos:
-      server-addr: localhost:8848
-      config:
-        file-extension: yml # 文件后缀名
-  application:
-    name: gateway-service
-```
-
-2. 在nacos控制台创建配置文件
-
-![image-20240324224923143](https://img2.imgtp.com/2024/04/04/GU95oOv7.png)
-
-配置文件的名字为`{application.name}-{dev/test}.yml`
-
-![image-20240324225122126](https://img2.imgtp.com/2024/04/04/stfNxt9H.png)
-
-配置内容一般为开关之类的配置，填写后点击发布
-
-3. 读取配置
-
-```yml
-config:
-  name: "cao"
-  
-```
-
-使用`@ConfigurationProperties`注解可以实现配置的热更新(配置发布后项目中配置立即更新)
-
-```java
-@Component
-@Data
-@ConfigurationProperties(prefix = "config")
-public class ConfigProperties {
-    public String name;
-}
-```
 
 
+> to be continued……

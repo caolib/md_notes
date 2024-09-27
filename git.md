@@ -32,7 +32,7 @@ Git的常用命令包括但不限于以下几个：
 
 工作流程图
 
-![image-20240325220023918](https://gitee.com/clibin/image-bed/raw/master/image-20240325220023918.png)
+![image-20240325220023918](https://s2.loli.net/2024/09/27/boYzTetVQDfp61R.png)
 
 ## 撤消提交
 
@@ -42,17 +42,11 @@ Revert 命令可创建一个新的提交，用于恢复先前提交所做的更�
 
 虽然你可以用[git reset](https://nulab.com/zh-cn/learn/software-development/git-tutorial/git-commands-settings/git-commit-history-commands/#remove-previous-commit)或[git rebase -i](https://nulab.com/zh-cn/learn/software-development/git-tutorial/git-commands-settings/git-commit-history-commands/#modify--move-past-commit-and-messages) 命令，从历史记录中删除先前的提交，但一般不建议这样做，因为这会导致远程存储库与其他成员的本地存储库不同
 
-![](https://img2.imgtp.com/2024/04/05/9LmbHSHT.png)
-
 
 
 ## 推送
 
 要与他人共享更改，您必须使用 [git push](https://nulab.com/zh-cn/learn/software-development/git-tutorial/git-commands-settings/remote-git-commands/#create--push-branch-changes-to-remote-repository)命令，这将更新远程存储库并将其与本地存储库同步。
-
-![Diagram of pushing changes.](https://img2.imgtp.com/2024/04/05/3aE4gI25.png)
-
-
 
 ## 解决合并冲突
 
@@ -60,13 +54,15 @@ Revert 命令可创建一个新的提交，用于恢复先前提交所做的更�
 
 发生这种情况时，Git 会在冲突文件中添加**冲突解决标记**。这些标记可帮助您确定文件的哪些部分**需要手动处理**。
 
-![Diagram of a merging change.](https://img2.imgtp.com/2024/04/05/axyuLgdV.png)发生冲突的示例。
+发生冲突的示例。
 
 在我们上面的例子中，`=====`上面的所有内容都是您的本地内容，下面的所有内容都来自远程分支。
 
 在继续创建合并提交之前，您必须依照下列所示方式解决冲突部分。
 
-![Diagram of a merging change.](https://img2.imgtp.com/2024/04/05/sTrZf4ry.png)修改变更集以解决冲突。
+
+
+修改变更集以解决冲突。
 
 
 
@@ -74,7 +70,9 @@ Revert 命令可创建一个新的提交，用于恢复先前提交所做的更�
 
 您可以通过运行 [git commit --amend 命令](https://nulab.com/zh-cn/learn/software-development/git-tutorial/git-commands-settings/git-commit-history-commands/#modify-previous-commit-and-messages)修改同一分支中的最新提交。这个命令可以方便地将新的或更新的文件添加到上一次提交中。这也是一种编辑提交消息或将提交消息添加到上一次提交的简便方法。
 
-![Diagram using the git ammend command.](https://img2.imgtp.com/2024/04/05/VvZtwaIV.png)使用 git commit --amend 修改最新的提交
+
+
+用 git commit --amend 修改最新的提交
 
 ## 分支
 

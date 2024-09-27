@@ -84,7 +84,6 @@ ___粗斜体文本___
 
 脚注是对文本的**补充说明**,鼠标悬浮后会显示内容,脚注一般放在文章最后
 
-![recording](https://img2.imgtp.com/2024/04/04/K3w12Fo0.gif)
 
 ```markdown
 我会使用[^markdown]
@@ -236,7 +235,7 @@ Markdown 图片语法格式如下：
 ![alt 属性文本](图片地址)
 ![alt 属性文本](图片地址 "鼠标悬浮时的提示文本")
 
-![boqi](https://img2.imgtp.com/2024/04/03/EblMf6FV.gif "头要甩掉了...")
+![](https://s2.loli.net/2024/06/02/wuJknzxaFigDSdL.gif)
 ```
 
 - 开头一个感叹号 !
@@ -245,7 +244,7 @@ Markdown 图片语法格式如下：
 - 图片的链接也可以定义为变量后使用变量名使用
 - **如果要改变图片大小，只能使用`img`标签设定相应属性**
 
-![boqi](https://img2.imgtp.com/2024/04/04/A1kg7et8.gif "头要甩掉了...")
+![boqi](https://s2.loli.net/2024/06/02/wuJknzxaFigDSdL.gif)
 
 
 
@@ -342,7 +341,7 @@ Markdown 图片语法格式如下：
 - [ ] Contact the media
 ```
 
-![image-20240323144532355](https://img2.imgtp.com/2024/04/04/7kFSR5OI.png)
+![image-20240927134014360](https://s2.loli.net/2024/09/27/ODtdpIVmSHABYTL.png)
 
 - [x] Write the press release
 - [ ] Update the website
@@ -369,7 +368,7 @@ Markdown 图片语法格式如下：
 真好笑！ :joy:
 ```
 
-![image-20240323144459538](https://img2.imgtp.com/2024/04/04/Z7UFAt5A.png)
+![image-20240927134104161](https://s2.loli.net/2024/09/27/OGM4dRCVp7zyb3H.png)
 
 **Note:** 注意：您可以使用此[表情符号简码列表](https://gist.github.com/rxaviers/7360908)，但请记住，表情符号简码因应用程序而异。有关更多信息，请参阅Markdown应用程序的文档
 
@@ -403,7 +402,7 @@ $$
 
 ### github风格警告框
 
-<img src="https://img2.imgtp.com/2024/04/14/519OjPJs.png" alt="image-20240414094352692" style="zoom:50%;" />
+<img src="https://s2.loli.net/2024/09/27/LIhvkjbP2WFJAQw.png" alt="image-20240927134137634" style="zoom:80%;" />
 
 > [!NOTE]
 >
@@ -445,7 +444,7 @@ $$
 
 > 在通用设置中打开调试模式
 
-![image-20240323133251040](https://img2.imgtp.com/2024/04/04/jnRNJQXi.png)
+![image-20240927134259142](https://s2.loli.net/2024/09/27/RA8tVjh9JW3Mm47.png)
 
 示例：假设我想修改**引用前面竖杠**的颜色
 
@@ -457,15 +456,11 @@ $$
 2. 使用左上角的选择器选择引用框
 3. 在右边样式中找到`boder-left`样式,修改颜色直到满意为止
 
-**这样修改只是暂时的，如果想要永久生效就要找到对应主题的css文件,找到刚才的属性修改好保存并重启typora(或切换2次主题重新加载当前主题)**
+> **这样修改只是暂时的，如果想要永久生效就要找到对应主题的css文件,找到刚才的属性修改好保存并重启typora(或切换2次主题重新加载当前主题)**
 
 - 样式中信息说明这个属性在`maize.css`文件第`188`行
 
-![image-20240323134839413](https://img2.imgtp.com/2024/04/04/4UwdspQr.png)
-
 - 先复制修改好的颜色属性，找到`maize.css`(这是我使用的主题文件,不同主题是不一样的)
-
-  ![image-20240323135320144](https://img2.imgtp.com/2024/04/04/d2MqWoFJ.png)
 
 - 修改对应属性并保存
 
@@ -483,15 +478,11 @@ $$
 
 > markdown中插入的图片会放到一个文件夹下，如果要将文档发给其他人查看，必须将图片全部一起发过去，并且md文件和图片文件夹要放在一起，路径对不上的话所有图片都会加载不出来，非常的麻烦，一般md中插入图片使用图片的url地址，只要有网就能加载
 
-可以使用一些免费图床([ImgTP](https://www.imgtp.com/),[SM.MS](https://sm.ms/)),或者使用`github/gitee`搭建免费图床(**不推荐**),最好是使用付费图床(稳定)，可自行上网搜索怎么使用
-
-![image-20240323140334497](https://img2.imgtp.com/2024/04/04/ridGMJBj.png)
+可以使用一些免费图床(有风险),或者使用`github`搭建免费图床(**不推荐**),最好是使用付费图床(稳定)，可自行上网搜索怎么使用
 
 ### 自定义快捷键
 
 打开高级设置
-
-![image-20240323140954338](https://img2.imgtp.com/2024/04/04/yPFwQOv7.png)
 
 打开`conf.user.json`文件，添加快捷键，快捷键名称必须是在菜单栏中存在的，这是我设置的一些快捷键
 
@@ -504,4 +495,5 @@ $$
 
 
 [markdown]:https://markdown.com.cn/
+
 [home]:https://clb.pages.dev "我的博客主页"
