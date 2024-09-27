@@ -5,7 +5,6 @@ categories: 后端
 tags: 
   - 邮件
   - springboot
-cover: https://img2.imgtp.com/2024/04/26/crgCyh4I.jpeg
 stick: 955
 ---
 

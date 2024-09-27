@@ -5,7 +5,6 @@ categories: 数据库
 tags: 
   - mysql
   - 数据库
-cover: https://img2.imgtp.com/2024/04/26/wBGeLSLD.png
 stick: 990
 ---
 

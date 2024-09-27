@@ -6,7 +6,7 @@ tags:
   - mybatis
   - java
 categories: 后端
-cover: https://img2.imgtp.com/2024/04/26/dAtgB1Oy.jpeg
+cover: https://s2.loli.net/2024/06/09/ZuWeizVmJ3DNOgq.webp
 stick: 996
 ---
 

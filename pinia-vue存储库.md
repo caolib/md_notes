@@ -6,7 +6,6 @@ categories:
   - vue
 tags:
   - pinia
-cover: https://img2.imgtp.com/2024/04/26/yc2Pfb9m.jpeg
 stick: 300
 ---
 

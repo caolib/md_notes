@@ -4,7 +4,7 @@ date: 2024-03-01 22:13:26
 categories: 
     - tools
 tags: markdown
-cover: https://files.codelife.cc/wallhaven/full/45/wallhaven-457vj9.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp
+cover: https://s2.loli.net/2024/06/09/MgYqOejQcICpFsP.webp
 sticky: 7777
 ---
 

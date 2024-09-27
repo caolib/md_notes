@@ -6,7 +6,7 @@ tags:
   - 搜索
 categories:
   - tools
-cover: https://img2.imgtp.com/2024/04/26/npP2lwWl.png
+cover: https://s2.loli.net/2024/06/07/agix2nv7zhCYGJj.webp
 stick: 700
 ---
 

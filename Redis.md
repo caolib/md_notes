@@ -6,7 +6,6 @@ tags:
   - redis
   - 数据库
   - NOSQL
-cover: https://img2.imgtp.com/2024/04/26/uXIQ2MgX.jpeg
 stick: 966
 ---
 

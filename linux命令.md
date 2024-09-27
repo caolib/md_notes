@@ -3,7 +3,6 @@ title: linux命令
 date: 2023-08-31 00:59:04
 categories: os
 tags: linux
-cover: https://img2.imgtp.com/2024/04/26/vSmYRYLp.png
 stick: 900
 ---
 

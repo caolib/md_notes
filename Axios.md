@@ -5,7 +5,6 @@ categories:
     - 前端
     - vue
 tags: axios
-cover: https://img2.imgtp.com/2024/04/26/70AimvgV.jpeg
 stick: 99
 ---
 

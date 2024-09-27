@@ -3,7 +3,6 @@ title: C++
 date: 2023-07-28 21:03:14
 categories: 后端
 tags: c++
-cover: https://img2.imgtp.com/2024/04/26/qcD2fLzw.jpeg
 stick: 888
 ---
 

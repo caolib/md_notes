@@ -5,7 +5,7 @@ categories: 测试
 tags: 
     - apifox
     - 测试
-cover: https://s2.loli.net/2024/06/09/MgYqOejQcICpFsP.webp
+cover: https://s2.loli.net/2024/06/07/f1vmkl74TSUuIG3.webp
 sticky: 8888
 ---
 

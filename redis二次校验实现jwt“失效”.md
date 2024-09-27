@@ -5,7 +5,6 @@ categories: 后端
 tags: 
   - redis
   - jwt
-cover: https://img2.imgtp.com/2024/04/26/oVoIaabg.jpeg
 stick: 201
 ---
 
